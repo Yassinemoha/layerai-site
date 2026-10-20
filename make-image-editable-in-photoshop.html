@@ -1,1 +1,415 @@
+<!DOCTYPE html><html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>How to Make an Image Editable in Photoshop | LayerAI</title>
 
+<meta name="description" content="Learn how to make a flat image more editable in Photoshop by separating objects, recreating text, using layers, and preparing a flexible PSD file.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://yassinemoha.github.io/layerai-site/make-image-editable-in-photoshop.html">
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+    .article-content {
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    .article-label {
+        display: inline-block;
+        color: #7057d9;
+        background: #f1edff;
+        padding: 7px 13px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+
+    .article-content h1 {
+        font-size: clamp(30px, 5vw, 44px);
+        line-height: 1.3;
+        margin-bottom: 18px;
+    }
+
+    .article-meta {
+        color: #77748a;
+        font-size: 14px;
+        margin-bottom: 28px;
+    }
+
+    .article-content h2 {
+        margin-top: 36px;
+        margin-bottom: 14px;
+        font-size: 26px;
+        line-height: 1.4;
+    }
+
+    .article-content h3 {
+        margin-top: 24px;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .article-content p,
+    .article-content li {
+        color: #55546a;
+        line-height: 1.9;
+        font-size: 16px;
+    }
+
+    .article-content ul,
+    .article-content ol {
+        padding-left: 25px;
+    }
+
+    .article-callout {
+        background: #f7f5ff;
+        border: 1px solid #e9e3ff;
+        border-left: 4px solid #7057d9;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 24px 0;
+    }
+
+    .article-callout p {
+        margin-bottom: 0;
+    }
+
+    .article-steps {
+        padding: 22px;
+        background: #fff;
+        border: 1px solid #e6e3f2;
+        border-radius: 14px;
+        margin: 22px 0;
+    }
+
+    .related-articles {
+        margin-top: 42px;
+        padding: 25px;
+        background: #f7f5ff;
+        border-radius: 14px;
+    }
+
+    .related-articles a {
+        color: #6650d9;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .related-articles li {
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 480px) {
+        .article-content h2 {
+            font-size: 23px;
+        }
+
+        .article-content p,
+        .article-content li {
+            font-size: 15px;
+        }
+
+        .article-callout,
+        .article-steps,
+        .related-articles {
+            padding: 18px;
+        }
+    }
+</style>
+
+</head><body><header>
+    <div class="container">
+        <a href="index.html" class="logo">LayerAI</a>    <nav aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="articles.html" class="active" aria-current="page">Articles</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</div>
+
+</header><main class="container page-content"><article class="article-content">
+
+    <span class="article-label">PHOTOSHOP &amp; IMAGE EDITING</span>
+
+    <h1>How to Make an Image Editable in Photoshop</h1>
+
+    <p class="article-meta">Photoshop Guide · 8 min read</p>
+
+    <p>
+        Have you ever opened an image in Photoshop and discovered that
+        everything is combined into a single layer? You may want to change
+        the text, move an object, replace the background, or adjust one
+        part of the design without affecting the rest.
+    </p>
+
+    <p>
+        The good news is that you can make many images more flexible to edit
+        by organizing their elements into separate layers. The process
+        depends on the image and on which parts you want to change.
+    </p>
+
+    <div class="article-callout">
+        <p>
+            <strong>Important:</strong> A JPG or PNG image does not
+            automatically become fully editable just because you save it
+            as a PSD. You need to separate or recreate the elements you
+            want to edit independently.
+        </p>
+    </div>
+
+    <h2>1. Understand Why Some Images Are Difficult to Edit</h2>
+
+    <p>
+        A flattened image stores its visible content together in one
+        image layer. For example, a poster may contain a photograph,
+        a title, smaller text, shapes, and a colored background. In a
+        flattened JPG, these parts are usually combined into the same
+        pixels.
+    </p>
+
+    <p>
+        This means you cannot simply select the original title and edit
+        its words as if it were a normal text layer. You may need to
+        remove the old text, reconstruct the background, and create a
+        new text layer.
+    </p>
+
+    <h2>2. Open the Image and Create a PSD File</h2>
+
+    <div class="article-steps">
+        <ol>
+            <li>Open Adobe Photoshop.</li>
+            <li>Choose File and then Open.</li>
+            <li>Select the JPG or PNG image you want to edit.</li>
+            <li>Choose File, then Save As or Save a Copy, depending on your version.</li>
+            <li>Select Photoshop PSD as the file format and save a copy.</li>
+        </ol>
+    </div>
+
+    <p>
+        This creates a PSD document that can preserve layers you add
+        later. However, at this stage, the original image may still
+        be only one layer.
+    </p>
+
+    <h2>3. Separate the Main Objects</h2>
+
+    <p>
+        If you want to move a person, product, animal, or another object
+        independently, you need to isolate it from the rest of the image.
+    </p>
+
+    <h3>Use Photoshop Selection Tools</h3>
+
+    <p>
+        Depending on your Photoshop version, tools such as Object
+        Selection, Quick Selection, and Select Subject can help identify
+        the object you want to isolate.
+    </p>
+
+    <div class="article-steps">
+        <ol>
+            <li>Choose a selection tool suitable for your image.</li>
+            <li>Select the object you want to separate.</li>
+            <li>Inspect the selection around hair, edges, and small details.</li>
+            <li>Refine the selection if necessary.</li>
+            <li>Copy the selected object to a new layer or use a layer mask.</li>
+            <li>Rename the new layer so you can identify it easily.</li>
+        </ol>
+    </div>
+
+    <p>
+        Repeat the process for other objects you need to edit separately.
+        Results depend on image quality, object boundaries, lighting,
+        and how much the objects overlap.
+    </p>
+
+    <h2>4. Make Text Editable Again</h2>
+
+    <p>
+        Text that has been flattened into a JPG or PNG is usually stored
+        as pixels rather than as editable characters. Photoshop cannot
+        always recover the original font, wording, size, and spacing
+        automatically.
+    </p>
+
+    <p>To recreate editable text:</p>
+
+    <ol>
+        <li>Identify the words in the original image.</li>
+        <li>Use OCR software if you need help recognizing the text.</li>
+        <li>Remove or cover the old text where appropriate.</li>
+        <li>Choose the Type Tool in Photoshop.</li>
+        <li>Type the words into a new text layer.</li>
+        <li>Adjust the font, color, size, alignment, and spacing.</li>
+    </ol>
+
+    <p>
+        OCR can make mistakes, especially with small letters, unusual
+        fonts, curved text, or low-resolution images. Always check the
+        extracted wording before using it.
+    </p>
+
+    <div class="article-callout">
+        <p>
+            <strong>Tip:</strong> If the original text uses a special
+            font or complex effects, the recreated version may not match
+            perfectly. Compare the new text with the original and make
+            adjustments where needed.
+        </p>
+    </div>
+
+    <h2>5. Remove an Object and Reconstruct the Background</h2>
+
+    <p>
+        Separating an object may reveal an empty area behind it. If the
+        original image had a person standing in front of a wall, for
+        example, the wall behind that person may not be stored anywhere
+        in the file.
+    </p>
+
+    <p>
+        You may need to reconstruct the missing area using tools such as
+        Content-Aware Fill, the Clone Stamp Tool, the Healing Brush,
+        or other suitable editing methods.
+    </p>
+
+    <p>
+        Simple backgrounds are often easier to repair. Complex scenes
+        with patterns, text, shadows, or many overlapping objects may
+        require more careful manual work.
+    </p>
+
+    <h2>6. Organize Your Layers</h2>
+
+    <p>
+        Once you have separated the elements you need, organize the
+        document so that it remains easy to understand and edit.
+    </p>
+
+    <ul>
+        <li>Give each layer a clear, descriptive name.</li>
+        <li>Keep text on separate text layers whenever possible.</li>
+        <li>Use layer masks when you want to hide parts without permanently deleting pixels.</li>
+        <li>Group related layers, such as background elements or title graphics.</li>
+        <li>Save the project as a PSD to preserve the layer structure.</li>
+    </ul>
+
+    <h2>7. Can AI Make an Image Editable Automatically?</h2>
+
+    <p>
+        AI tools can help with parts of this process. Depending on the
+        tool, they may identify objects, remove backgrounds, recognize
+        text, or help fill areas left behind after removing an element.
+    </p>
+
+    <p>
+        However, these functions are different from recovering the
+        original design perfectly. An AI tool may miss small objects,
+        combine several elements, misread text, or create imperfect
+        background repairs.
+    </p>
+
+    <p>
+        Always inspect the result before using it in a professional
+        project. For complex images, you may need to combine AI-assisted
+        separation with manual editing.
+    </p>
+
+    <h2>8. Common Problems and How to Solve Them</h2>
+
+    <h3>The object has rough or missing edges</h3>
+    <p>
+        Refine the selection or mask, zoom in, and inspect areas such
+        as hair, transparent objects, and fine details.
+    </p>
+
+    <h3>The old text is still visible</h3>
+    <p>
+        Check whether the original flattened image remains visible
+        underneath your new text or object layers. You may need to
+        repair the background or hide the original layer.
+    </p>
+
+    <h3>The background looks damaged after removing an object</h3>
+    <p>
+        Try a different repair method, work on a separate layer, and
+        compare the repaired area with nearby textures and colors.
+    </p>
+
+    <h3>The PSD still contains only one layer</h3>
+    <p>
+        Saving an image as PSD does not automatically separate its
+        contents. You must create additional layers or masks for the
+        elements you want to edit independently.
+    </p>
+
+    <h2>Conclusion</h2>
+
+    <p>
+        Making an image editable in Photoshop means more than changing
+        its file extension. You need to separate important objects,
+        recreate flattened text when necessary, repair missing
+        background areas, and organize the result into useful layers.
+    </p>
+
+    <p>
+        AI can help speed up some tasks, but careful checking and
+        manual adjustments are often still necessary. Start with
+        the elements you most want to change, then improve the layer
+        structure as needed.
+    </p>
+
+    <section class="related-articles">
+        <h2>Related Articles</h2>
+
+        <ul>
+            <li>
+                <a href="convert-image-to-psd.html">
+                    How to Convert an Image to PSD with Separate Layers
+                </a>
+            </li>
+            <li>
+                <a href="make-psd-file-from-jpg.html">
+                    How to Make a PSD File from a JPG Image
+                </a>
+            </li>
+            <li>
+                <a href="separate-objects-in-image-ai.html">
+                    How to Separate Objects in an Image Using AI
+                </a>
+            </li>
+            <li>
+                <a href="extract-text-from-image-edit.html">
+                    How to Extract Text from an Image and Edit It
+                </a>
+            </li>
+            <li>
+                <a href="best-free-ai-image-editing-tools.html">
+                    Best Free AI Tools for Image Editing
+                </a>
+            </li>
+        </ul>
+
+        <p>
+            <a href="articles.html">View All Articles &rarr;</a>
+        </p>
+    </section>
+
+</article>
+
+</main><footer>
+    <div class="container">
+        <p>&copy; 2026 LayerAI. All rights reserved.</p>    <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+</div>
+
+</footer></body>
+</html>
