@@ -1,245 +1,524 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>JPG vs PNG vs PSD: What's the Difference? | LayerAI</title>
-<meta name="description" content="Compare JPG, PNG, and PSD image formats. Learn about image quality, transparency, file size, editable layers, and when to use each format.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://yassinemoha.github.io/layerai-site/jpg-vs-png-vs-psd.html">
-<link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-</head><body><header>
-    <div class="container">
+    <title>JPG vs PNG vs PSD: What's the Difference? | LayerAI</title>
+
+    <meta name="description" content="Compare JPG, PNG, and PSD image formats. Learn about image quality, transparency, file size, editable layers, and when to use each format.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://yassinemoha.github.io/layerai-site/jpg-vs-png-vs-psd.html">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .page-content > article > header.about-hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-content > article > header.about-hero > p:first-child {
+            color: #7057d9;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        .page-content > article > header.about-hero h1 {
+            line-height: 1.35;
+            margin: 16px 0;
+        }
+
+        .page-content > article > header.about-hero .lead {
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 18px;
+        }
+
+        .page-content > article > section {
+            margin-bottom: 36px;
+            line-height: 1.8;
+        }
+
+        .page-content > article > section h2 {
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .page-content > article > section h3 {
+            margin-top: 22px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .page-content > article > section p {
+            margin-bottom: 16px;
+        }
+
+        .page-content > article > section li {
+            margin-bottom: 8px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            overflow-wrap: anywhere;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            border: 1px solid #e2e2e8;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background: #f3f0ff;
+            color: #38256e;
+        }
+
+        .article-note {
+            background: #f5f3ff;
+            border-left: 4px solid #7057d9;
+            padding: 16px;
+            margin: 24px 0;
+            border-radius: 6px;
+        }
+
+        .article-cta {
+            background: linear-gradient(135deg, #f5f3ff, #eef5ff);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 30px 0;
+        }
+
+        .article-cta a {
+            color: #6545c5;
+            font-weight: 700;
+        }
+
+        @media (max-width: 600px) {
+            .comparison-table th,
+            .comparison-table td {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            .article-cta {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar container">
         <a href="index.html" class="logo">LayerAI</a>
-        <nav aria-label="Main Navigation">
+
+        <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="articles.html" class="active">Articles</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </div>
-</header><main class="container page-content">
-    <article>    <header class="about-hero">
-        <p>IMAGE FORMATS GUIDE</p>
-        <h1>JPG vs PNG vs PSD: What's the Difference?</h1>
-        <p class="lead">
-            Discover the differences between JPG, PNG, and PSD, including
-            image quality, transparency, file size, and the ability to
-            edit individual elements in a design.
-        </p>
-        <p><small>Published October 20, 2026 · LayerAI</small></p>
-    </header>
+            <a href="articles.html">Articles</a>
+        </div>
+    </nav>
+</header>
 
-    <section>
-        <h2>Why Do Image File Formats Matter?</h2>
-        <p>
-            Image formats determine how visual information is stored and
-            how you can use a file. Some formats are designed for sharing
-            photographs, others are useful for transparent graphics, and
-            some preserve the editing information needed for complex designs.
-        </p>
-        <p>
-            JPG, PNG, and PSD are common formats, but they are not
-            interchangeable in every situation. Choosing the right one
-            can make your workflow easier and help you avoid unnecessary
-            quality loss or editing problems.
-        </p>
-    </section>
+<main class="container page-content">
 
-    <section>
-        <h2>What Is JPG?</h2>
-        <p>
-            JPG, also known as JPEG, is a widely supported image format
-            commonly used for photographs and images published online.
-            It uses lossy compression, which reduces file size by
-            discarding some image information.
-        </p>
-        <h3>Advantages of JPG</h3>
-        <ul>
-            <li>Usually produces relatively small image files.</li>
-            <li>Works on almost all devices and websites.</li>
-            <li>Suitable for photographs and everyday image sharing.</li>
-            <li>Useful when storage space and upload speed matter.</li>
-        </ul>
-        <h3>Limitations of JPG</h3>
-        <ul>
-            <li>Does not support transparent backgrounds.</li>
-            <li>Repeated editing and saving can introduce compression artifacts.</li>
-            <li>Does not preserve separate Photoshop layers.</li>
-        </ul>
-        <p>
-            <strong>Best for:</strong> photographs, website images, and
-            situations where a smaller file size is important.
-        </p>
-    </section>
+    <article>
 
-    <section>
-        <h2>What Is PNG?</h2>
-        <p>
-            PNG is an image format that uses lossless compression. It
-            preserves the stored image data and supports transparency,
-            making it useful for logos, icons, interface graphics, and
-            cutout objects.
-        </p>
-        <h3>Advantages of PNG</h3>
-        <ul>
-            <li>Supports transparent backgrounds.</li>
-            <li>Preserves image details without lossy compression.</li>
-            <li>Works well for logos, screenshots, and graphics containing text.</li>
-            <li>Useful for objects cut out from their original backgrounds.</li>
-        </ul>
-        <h3>Limitations of PNG</h3>
-        <ul>
-            <li>Photographs may have larger file sizes than JPG files.</li>
-            <li>A standard PNG does not preserve separate Photoshop layers.</li>
-            <li>Text inside a flattened PNG is not automatically editable.</li>
-        </ul>
-        <p>
-            <strong>Best for:</strong> transparent images, logos, icons,
-            and detailed graphics that need clean edges.
-        </p>
-    </section>
+        <header class="about-hero">
+            <p>IMAGE FORMATS GUIDE</p>
 
-    <section>
-        <h2>What Is PSD?</h2>
-        <p>
-            PSD is the native document format associated with Adobe
-            Photoshop. It can preserve separate layers and other editing
-            information, allowing you to work on individual parts of
-            a design.
-        </p>
-        <h3>Advantages of PSD</h3>
-        <ul>
-            <li>Can preserve separate objects and image layers.</li>
-            <li>Can retain editable text layers when they are present.</li>
-            <li>Supports layer masks and many advanced editing features.</li>
-            <li>Makes it easier to revise a design without rebuilding everything.</li>
-        </ul>
-        <h3>Limitations of PSD</h3>
-        <ul>
-            <li>Files can be much larger than JPG or PNG images.</li>
-            <li>Some applications may not support every Photoshop feature.</li>
-            <li>Saving a flat image as PSD does not automatically separate its contents.</li>
-        </ul>
-        <p>
-            <strong>Best for:</strong> layered design projects, Photoshop
-            editing, and work that may need future revisions.
-        </p>
-    </section>
+            <h1>JPG vs PNG vs PSD: What's the Difference?</h1>
 
-    <section>
-        <h2>JPG vs PNG vs PSD: Main Differences</h2>
-        <p>
-            The biggest difference is how each format stores image
-            information. JPG is optimized for compact photographs, PNG
-            is useful for lossless images and transparency, and PSD
-            can preserve an editable document structure.
-        </p>
-        <ul>
-            <li><strong>JPG:</strong> usually small files, but no transparency or layers.</li>
-            <li><strong>PNG:</strong> supports transparency and lossless compression, but not separate layers in a standard file.</li>
-            <li><strong>PSD:</strong> can store layers and editing information, but may require more storage space.</li>
-        </ul>
-    </section>
+            <p class="lead">
+                Learn the differences between JPG, PNG, and PSD images.
+                Discover which format is best for photographs, transparent
+                graphics, and editable designs with separate layers.
+            </p>
 
-    <section>
-        <h2>Can You Convert JPG or PNG into PSD?</h2>
-        <p>
-            Yes. You can open a JPG or PNG in Photoshop and save it as a
-            PSD document. However, the original image will normally remain
-            a single flat layer unless you separate its elements yourself
-            or use tools that help you do so.
-        </p>
-        <p>
-            If you want independent layers for people, products, text,
-            and backgrounds, you must extract or recreate those elements.
-            AI tools may help identify objects or text, but results depend
-            on the image and may require manual correction.
-        </p>
-        <p>
-            Read our guide:
-            <a href="convert-image-to-psd.html">How to Convert an Image to PSD with Separate Layers</a>.
-        </p>
-    </section>
+            <p>
+                <small>Published October 20, 2026 · LayerAI</small>
+            </p>
+        </header>
 
-    <section>
-        <h2>Which Image Format Should You Choose?</h2>
-        <ul>
-            <li>
-                <strong>Choose JPG</strong> for photographs and sharing
-                images when a smaller file is useful.
-            </li>
-            <li>
-                <strong>Choose PNG</strong> for transparent graphics,
-                logos, screenshots, and sharp visual elements.
-            </li>
-            <li>
-                <strong>Choose PSD</strong> when you need to preserve
-                separate layers and continue editing a design.
-            </li>
-        </ul>
-    </section>
+        <section>
+            <h2>Introduction</h2>
 
-    <section>
-        <h2>Frequently Asked Questions</h2>
+            <p>
+                Choosing the right image format can make a big difference
+                when editing, sharing, or saving your images. JPG, PNG,
+                and PSD are three common formats, but each one serves
+                a different purpose.
+            </p>
 
-        <h3>Is PNG better than JPG?</h3>
-        <p>
-            Neither format is always better. PNG is useful for transparency
-            and lossless graphics, while JPG is often better for photographs
-            when smaller file sizes are important.
-        </p>
+            <p>
+                JPG is commonly used for photographs, PNG is useful for
+                images that need transparency, and PSD is designed for
+                projects that need editable layers in Adobe Photoshop.
+            </p>
 
-        <h3>Is PSD better quality than PNG?</h3>
-        <p>
-            They serve different purposes. PSD can preserve layers and
-            editing information, while PNG is commonly used to display
-            or share a finished image. The visible quality depends on
-            the image data and export settings.
-        </p>
+            <p>
+                In this guide, you will learn how these formats work,
+                their advantages and disadvantages, and when to use each one.
+            </p>
+        </section>
 
-        <h3>Can a JPG contain editable text layers?</h3>
-        <p>
-            No. Text in a standard JPG is stored as part of the image
-            pixels. To edit it independently, you generally need to
-            remove or cover the original text and create a new text layer.
-        </p>
+        <section>
+            <h2>1. What Is JPG?</h2>
 
-        <h3>Does converting PNG to PSD create separate layers?</h3>
-        <p>
-            No. Simply saving a PNG as PSD does not automatically
-            separate the objects. You must create or extract the
-            individual layers separately.
-        </p>
-    </section>
+            <p>
+                JPG, also written as JPEG, is a popular image format
+                commonly used for photographs, website images, and
+                pictures shared online.
+            </p>
 
-    <section>
-        <h2>Conclusion</h2>
-        <p>
-            JPG, PNG, and PSD each have a useful role in image editing.
-            JPG is convenient for photographs, PNG is ideal for many
-            transparent graphics, and PSD is designed to preserve
-            editable layers and other project information.
-        </p>
-        <p>
-            Understanding these differences helps you choose the right
-            format for your project and plan your editing workflow.
-        </p>
-        <p>
-            Explore more tutorials on the
-            <a href="articles.html">LayerAI Articles &amp; Guides page</a>.
-        </p>
-    </section>
+            <p>
+                JPG uses lossy compression. This means that some image
+                information is removed to reduce the file size. At
+                reasonable quality settings, the visual difference
+                may be difficult to notice.
+            </p>
 
-</article>
+            <h3>Advantages of JPG</h3>
 
-</main><footer>
+            <ul>
+                <li>Usually produces relatively small files.</li>
+                <li>Works with most phones, computers, and image editors.</li>
+                <li>Suitable for photographs and everyday images.</li>
+                <li>Useful when fast loading and smaller downloads matter.</li>
+            </ul>
+
+            <h3>Disadvantages of JPG</h3>
+
+            <ul>
+                <li>Does not support transparent backgrounds.</li>
+                <li>Repeated saving with lossy compression can reduce quality.</li>
+                <li>Does not preserve Photoshop editing layers.</li>
+            </ul>
+
+            <p>
+                <strong>Best use:</strong> photographs, website pictures,
+                and images that need to be shared efficiently.
+            </p>
+        </section>
+
+        <section>
+            <h2>2. What Is PNG?</h2>
+
+            <p>
+                PNG is an image format that uses lossless compression.
+                It preserves the image data without the quality loss
+                associated with lossy JPG compression.
+            </p>
+
+            <p>
+                One of PNG's most useful features is transparency.
+                This allows an image to have a transparent background,
+                making it useful for logos, icons, stickers, and
+                graphic elements.
+            </p>
+
+            <h3>Advantages of PNG</h3>
+
+            <ul>
+                <li>Supports transparent backgrounds.</li>
+                <li>Uses lossless compression.</li>
+                <li>Works well for logos, icons, and interface graphics.</li>
+                <li>Preserves sharp edges and text clearly.</li>
+            </ul>
+
+            <h3>Disadvantages of PNG</h3>
+
+            <ul>
+                <li>Photographs may have larger file sizes than JPG images.</li>
+                <li>Does not normally preserve editable Photoshop layers.</li>
+                <li>Transparency alone does not make an image fully editable.</li>
+            </ul>
+
+            <p>
+                <strong>Best use:</strong> transparent graphics, logos,
+                icons, screenshots, and images that need lossless quality.
+            </p>
+        </section>
+
+        <section>
+            <h2>3. What Is PSD?</h2>
+
+            <p>
+                PSD is the native document format used by Adobe Photoshop.
+                Unlike a typical JPG or PNG file, a PSD document can
+                preserve separate layers and many editing features.
+            </p>
+
+            <p>
+                For example, a Photoshop project may contain separate
+                layers for the background, people, objects, text,
+                shadows, and other graphic elements.
+            </p>
+
+            <p>
+                These layers allow you to move, hide, recolor, or edit
+                individual elements without necessarily changing
+                the rest of the design.
+            </p>
+
+            <h3>Advantages of PSD</h3>
+
+            <ul>
+                <li>Can preserve separate editable layers.</li>
+                <li>Can retain text layers and other Photoshop features.</li>
+                <li>Useful for graphic design and professional editing.</li>
+                <li>Allows a project to be reopened and modified later.</li>
+            </ul>
+
+            <h3>Disadvantages of PSD</h3>
+
+            <ul>
+                <li>Files can be much larger than JPG or PNG files.</li>
+                <li>Not every image viewer supports the format.</li>
+                <li>Many PSD files require compatible editing software.</li>
+                <li>A flattened image saved as PSD does not automatically gain separate layers.</li>
+            </ul>
+
+            <p>
+                <strong>Best use:</strong> editable design projects,
+                layered compositions, and Photoshop workflows.
+            </p>
+        </section>
+
+        <section>
+            <h2>4. JPG vs PNG vs PSD: Main Differences</h2>
+
+            <p>
+                The following table summarizes the main differences
+                between these three formats.
+            </p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>JPG</th>
+                        <th>PNG</th>
+                        <th>PSD</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Compression</td>
+                        <td>Lossy</td>
+                        <td>Lossless</td>
+                        <td>Depends on document content and settings</td>
+                    </tr>
+
+                    <tr>
+                        <td>Transparency</td>
+                        <td>No</td>
+                        <td>Yes</td>
+                        <td>Can preserve transparency in layers</td>
+                    </tr>
+
+                    <tr>
+                        <td>Separate editable layers</td>
+                        <td>No</td>
+                        <td>No, not as standard PNG layers</td>
+                        <td>Yes, when the document contains layers</td>
+                    </tr>
+
+                    <tr>
+                        <td>Typical file size</td>
+                        <td>Small</td>
+                        <td>Small to large</td>
+                        <td>Often large</td>
+                    </tr>
+
+                    <tr>
+                        <td>Photographs</td>
+                        <td>Excellent</td>
+                        <td>Good, but often larger</td>
+                        <td>Useful for editing projects</td>
+                    </tr>
+
+                    <tr>
+                        <td>Logos with transparency</td>
+                        <td>Not ideal</td>
+                        <td>Excellent</td>
+                        <td>Useful for layered design work</td>
+                    </tr>
+
+                    <tr>
+                        <td>Professional editing</td>
+                        <td>Limited</td>
+                        <td>Limited</td>
+                        <td>Excellent for supported layered projects</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>5. Can You Convert JPG to PNG?</h2>
+
+            <p>
+                Yes. You can convert a JPG image into PNG using many
+                image editors and online conversion tools.
+            </p>
+
+            <p>
+                However, converting JPG to PNG does not restore image
+                information that was lost during JPG compression.
+                It also does not automatically create a transparent
+                background.
+            </p>
+
+            <p>
+                If you need transparency, you must remove the background
+                using an appropriate editing tool.
+            </p>
+        </section>
+
+        <section>
+            <h2>6. Can You Convert JPG or PNG to PSD?</h2>
+
+            <p>
+                Yes. A JPG or PNG image can be opened in Photoshop and
+                saved as a PSD document.
+            </p>
+
+            <p>
+                There is an important limitation: if the original image
+                is a single flattened image, saving it as PSD does not
+                automatically separate its people, objects, background,
+                and text into independent layers.
+            </p>
+
+            <p>
+                To make the image editable in separate parts, you need
+                to create those layers manually or use tools that help
+                identify and separate objects.
+            </p>
+
+            <div class="article-note">
+                <strong>Important:</strong>
+                Changing a file extension is not the same as converting
+                an image properly. A JPG file renamed to PSD does not
+                become a real layered Photoshop document.
+            </div>
+        </section>
+
+        <section>
+            <h2>7. Which Format Should You Choose?</h2>
+
+            <h3>Choose JPG if:</h3>
+
+            <ul>
+                <li>You mainly work with photographs.</li>
+                <li>You want a smaller image file.</li>
+                <li>You do not need transparency or editable layers.</li>
+            </ul>
+
+            <h3>Choose PNG if:</h3>
+
+            <ul>
+                <li>You need a transparent background.</li>
+                <li>You are working with logos, icons, or graphic elements.</li>
+                <li>You want lossless image compression.</li>
+            </ul>
+
+            <h3>Choose PSD if:</h3>
+
+            <ul>
+                <li>You want to preserve separate editing layers.</li>
+                <li>You are creating a design that may need future changes.</li>
+                <li>You need to edit text, objects, or backgrounds independently.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>8. How Can AI Help Separate Image Layers?</h2>
+
+            <p>
+                AI image editing tools can help identify people, objects,
+                and other elements in a flattened image. Depending on
+                the tool and the image, they may create separate image
+                layers or masks that can be used in an editing workflow.
+            </p>
+
+            <p>
+                Text can be more difficult because a tool must identify
+                the letters, separate them from the background, and
+                reconstruct the area behind the text.
+            </p>
+
+            <p>
+                Results depend on image quality, overlapping objects,
+                shadows, complex backgrounds, and the accuracy of the
+                detection models. Some images will still need manual
+                corrections.
+            </p>
+
+            <div class="article-cta">
+                <h3>Explore More Image Editing Guides</h3>
+
+                <p>
+                    Learn how to prepare images, remove backgrounds,
+                    and work with editable image layers.
+                </p>
+
+                <p>
+                    <a href="articles.html">Explore all LayerAI articles</a>
+                </p>
+
+                <p>
+                    <a href="convert-image-to-psd.html">
+                        How to Convert an Image to PSD with Separate Layers
+                    </a>
+                </p>
+
+                <p>
+                    <a href="remove-background-image-free.html">
+                        How to Remove Background from an Image for Free
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+
+            <p>
+                JPG, PNG, and PSD are designed for different purposes.
+                JPG is a practical choice for photographs and smaller
+                files. PNG is useful for transparency and lossless
+                graphics. PSD is the better choice when you need to
+                preserve supported editable layers in a Photoshop project.
+            </p>
+
+            <p>
+                Before choosing a format, consider whether you need
+                transparency, smaller file sizes, or the ability to
+                edit individual elements later.
+            </p>
+        </section>
+
+    </article>
+
+</main>
+
+<footer>
     <div class="container">
         <p>&copy; 2026 LayerAI. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Use</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
     </div>
-</footer></body>
+</footer>
+
+</body>
 </html>
