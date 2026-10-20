@@ -4,97 +4,240 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Articles & Guides | LayerAI</title>
-    <meta name="description" content="Explore practical guides on AI image editing, image-to-PSD conversion, image segmentation, and graphic design workflows.">
+    <title>Articles &amp; Guides | LayerAI</title>
+
+    <meta name="description" content="Explore practical guides on AI image editing, free background removal, image-to-PSD conversion, and graphic design workflows.">
+
     <meta name="robots" content="index, follow">
 
     <link rel="canonical" href="https://yassinemoha.github.io/layerai-site/articles.html">
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .articles-intro {
+            max-width: 760px;
+            margin: 0 auto 36px;
+            text-align: center;
+        }
+
+        .articles-label {
+            display: inline-block;
+            color: #7057d9;
+            background: #f1edff;
+            padding: 7px 13px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .article-card {
+            display: flex;
+            flex-direction: column;
+            padding: 26px;
+            border: 1px solid #e6e3f2;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 5px 20px rgba(54, 38, 110, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 28px rgba(54, 38, 110, 0.10);
+        }
+
+        .article-category {
+            color: #7057d9;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.7px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .article-card h2 {
+            font-size: 22px;
+            line-height: 1.45;
+            margin: 0 0 14px;
+        }
+
+        .article-card h2 a {
+            color: #26233a;
+            text-decoration: none;
+        }
+
+        .article-card h2 a:hover {
+            color: #7057d9;
+        }
+
+        .article-card p {
+            color: #626174;
+            line-height: 1.8;
+            margin: 0 0 18px;
+        }
+
+        .article-meta {
+            color: #88869a !important;
+            font-size: 13px;
+            margin-bottom: 14px !important;
+        }
+
+        .article-read-more {
+            display: inline-block;
+            margin-top: auto;
+            padding-top: 8px;
+            color: #6650d9;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .article-read-more:hover {
+            text-decoration: underline;
+        }
+
+        .articles-note {
+            margin-top: 42px;
+            padding: 28px;
+            border-radius: 16px;
+            background: #f7f5ff;
+            border: 1px solid #eee9ff;
+        }
+
+        .articles-note p {
+            line-height: 1.8;
+            color: #626174;
+        }
+
+        @media (max-width: 480px) {
+            .article-card {
+                padding: 21px;
+            }
+
+            .article-card h2 {
+                font-size: 20px;
+            }
+
+            .articles-note {
+                padding: 22px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">LayerAI</a>
+<header>
+    <div class="container">
+        <a href="index.html" class="logo">LayerAI</a>
 
-            <nav aria-label="Main Navigation">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="articles.html" class="active" aria-current="page">Articles</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
+        <nav aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="articles.html" class="active" aria-current="page">Articles</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
 
-    <main class="container page-content">
+<main class="container page-content">
 
-        <section class="about-hero">
-            <h1>Articles &amp; Guides</h1>
+    <section class="articles-intro">
+        <span class="articles-label">LEARN &amp; CREATE</span>
 
-            <p class="lead">
-                Explore practical tutorials, learn how AI can help with image editing,
-                and discover techniques for creating more flexible graphic design workflows.
+        <h1>Articles &amp; Guides</h1>
+
+        <p class="lead">
+            Explore practical tutorials on image editing, AI-assisted workflows,
+            background removal, and creating more flexible graphic design projects.
+        </p>
+    </section>
+
+    <section class="articles-grid" aria-label="Published articles">
+
+        <!-- Article 1 -->
+        <article class="article-card">
+
+            <span class="article-category">Image Editing &amp; PSD</span>
+
+            <h2>
+                <a href="convert-image-to-psd.html">
+                    How to Convert an Image to PSD with Separate Layers
+                </a>
+            </h2>
+
+            <p class="article-meta">Image Editing Guide · 8 min read</p>
+
+            <p>
+                Learn how to turn a flat image into a layered Photoshop document,
+                separate objects, understand text extraction, and discover common
+                challenges when reconstructing image backgrounds.
             </p>
-        </section>
 
-        <section class="articles-list" aria-label="Latest articles"
-                 style="margin-top: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 24px;">
+            <a class="article-read-more" href="convert-image-to-psd.html">
+                Read Full Article &rarr;
+            </a>
 
-            <article class="article-card"
-                     style="padding: 24px; border: 1px solid #e4e4ef; border-radius: 14px; background: #fff;">
+        </article>
 
-                <p style="font-size: 13px; color: #7057d9; font-weight: 600;">
-                    IMAGE EDITING GUIDE
-                </p>
+        <!-- Article 2 -->
+        <article class="article-card">
 
-                <h2 style="font-size: 22px; line-height: 1.4; margin-top: 10px;">
-                    <a href="convert-image-to-psd.html"
-                       style="text-decoration: none; color: inherit;">
-                        How to Convert an Image to PSD with Separate Layers
-                    </a>
-                </h2>
+            <span class="article-category">Free Image Editing</span>
 
-                <p style="margin-top: 12px; line-height: 1.8; color: #606070;">
-                    Learn how to separate image elements, create layer masks,
-                    reconstruct missing backgrounds, and understand the limitations
-                    of AI-assisted PSD conversion.
-                </p>
+            <h2>
+                <a href="remove-background-image-free.html">
+                    How to Remove Background from an Image for Free
+                </a>
+            </h2>
 
-                <p style="margin-top: 20px;">
-                    <a href="convert-image-to-psd.html"
-                       style="color: #6650d9; font-weight: 600; text-decoration: none;">
-                        Read Full Article &rarr;
-                    </a>
-                </p>
+            <p class="article-meta">Background Removal Guide · 6 min read</p>
 
-            </article>
-
-        </section>
-
-        <section style="margin-top: 40px; padding: 24px; border-radius: 12px; background: #f7f6ff;">
-            <h2>More Guides Coming Soon</h2>
-
-            <p style="margin-top: 10px; line-height: 1.8;">
-                We are working on more practical resources covering image editing,
-                AI-assisted workflows, and techniques for working with layered files.
-                Check back as new guides become available.
+            <p>
+                Discover free background removal methods, learn how AI creates
+                transparent cutouts, improve difficult edges, and choose the
+                right file format for your designs.
             </p>
-        </section>
 
-    </main>
+            <a class="article-read-more" href="remove-background-image-free.html">
+                Read Full Article &rarr;
+            </a>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 LayerAI. All rights reserved.</p>
+        </article>
 
-            <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Use</a>
-                <a href="contact.html">Contact Us</a>
-            </div>
+    </section>
+
+    <section class="articles-note">
+        <h2>More Guides Coming Soon</h2>
+
+        <p>
+            We are developing more educational resources about AI image editing,
+            image segmentation, graphic design, and working with layered files.
+            Our goal is to provide practical information that helps readers
+            understand these techniques and use them in their own projects.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 LayerAI. All rights reserved.</p>
+
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
+            <a href="contact.html">Contact Us</a>
         </div>
-    </footer>
+    </div>
+</footer>
 
 </body>
 </html>
