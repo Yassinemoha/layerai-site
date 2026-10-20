@@ -1,243 +1,252 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!DOCTYPE html><html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Articles &amp; Guides | LayerAI</title>
 
-    <title>Articles &amp; Guides | LayerAI</title>
+<meta name="description" content="Explore practical guides on AI image editing, free background removal, JPG to PSD conversion, and graphic design workflows.">
 
-    <meta name="description" content="Explore practical guides on AI image editing, free background removal, image-to-PSD conversion, and graphic design workflows.">
+<meta name="robots" content="index, follow">
 
-    <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yassinemoha.github.io/layerai-site/articles.html">
+<link rel="stylesheet" href="styles.css">
 
-    <link rel="canonical" href="https://yassinemoha.github.io/layerai-site/articles.html">
-    <link rel="stylesheet" href="styles.css">
+<style>
+    .articles-intro {
+        max-width: 760px;
+        margin: 0 auto 36px;
+        text-align: center;
+    }
 
-    <style>
-        .articles-intro {
-            max-width: 760px;
-            margin: 0 auto 36px;
-            text-align: center;
-        }
+    .articles-label {
+        display: inline-block;
+        color: #7057d9;
+        background: #f1edff;
+        padding: 7px 13px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 700;
+        margin-bottom: 14px;
+    }
 
-        .articles-label {
-            display: inline-block;
-            color: #7057d9;
-            background: #f1edff;
-            padding: 7px 13px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 14px;
-        }
+    .articles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+        gap: 24px;
+        margin-top: 32px;
+    }
 
-        .articles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-            gap: 24px;
-            margin-top: 32px;
-        }
+    .article-card {
+        display: flex;
+        flex-direction: column;
+        padding: 26px;
+        border: 1px solid #e6e3f2;
+        border-radius: 16px;
+        background: #fff;
+        box-shadow: 0 5px 20px rgba(54, 38, 110, 0.05);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
+    .article-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 28px rgba(54, 38, 110, 0.10);
+    }
+
+    .article-category {
+        color: #7057d9;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+
+    .article-card h2 {
+        font-size: 22px;
+        line-height: 1.45;
+        margin: 0 0 14px;
+    }
+
+    .article-card h2 a {
+        color: #26233a;
+        text-decoration: none;
+    }
+
+    .article-card h2 a:hover {
+        color: #7057d9;
+    }
+
+    .article-card p {
+        color: #626174;
+        line-height: 1.8;
+        margin: 0 0 18px;
+    }
+
+    .article-meta {
+        color: #88869a !important;
+        font-size: 13px;
+        margin-bottom: 14px !important;
+    }
+
+    .article-read-more {
+        display: inline-block;
+        margin-top: auto;
+        padding-top: 8px;
+        color: #6650d9;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .article-read-more:hover {
+        text-decoration: underline;
+    }
+
+    .articles-note {
+        margin-top: 42px;
+        padding: 28px;
+        border-radius: 16px;
+        background: #f7f5ff;
+        border: 1px solid #eee9ff;
+    }
+
+    .articles-note p {
+        line-height: 1.8;
+        color: #626174;
+    }
+
+    @media (max-width: 480px) {
         .article-card {
-            display: flex;
-            flex-direction: column;
-            padding: 26px;
-            border: 1px solid #e6e3f2;
-            border-radius: 16px;
-            background: #fff;
-            box-shadow: 0 5px 20px rgba(54, 38, 110, 0.05);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .article-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 28px rgba(54, 38, 110, 0.10);
-        }
-
-        .article-category {
-            color: #7057d9;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.7px;
-            text-transform: uppercase;
-            margin-bottom: 12px;
+            padding: 21px;
         }
 
         .article-card h2 {
-            font-size: 22px;
-            line-height: 1.45;
-            margin: 0 0 14px;
-        }
-
-        .article-card h2 a {
-            color: #26233a;
-            text-decoration: none;
-        }
-
-        .article-card h2 a:hover {
-            color: #7057d9;
-        }
-
-        .article-card p {
-            color: #626174;
-            line-height: 1.8;
-            margin: 0 0 18px;
-        }
-
-        .article-meta {
-            color: #88869a !important;
-            font-size: 13px;
-            margin-bottom: 14px !important;
-        }
-
-        .article-read-more {
-            display: inline-block;
-            margin-top: auto;
-            padding-top: 8px;
-            color: #6650d9;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        .article-read-more:hover {
-            text-decoration: underline;
+            font-size: 20px;
         }
 
         .articles-note {
-            margin-top: 42px;
-            padding: 28px;
-            border-radius: 16px;
-            background: #f7f5ff;
-            border: 1px solid #eee9ff;
+            padding: 22px;
         }
+    }
+</style>
 
-        .articles-note p {
-            line-height: 1.8;
-            color: #626174;
-        }
-
-        @media (max-width: 480px) {
-            .article-card {
-                padding: 21px;
-            }
-
-            .article-card h2 {
-                font-size: 20px;
-            }
-
-            .articles-note {
-                padding: 22px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-<header>
+</head><body><header>
     <div class="container">
-        <a href="index.html" class="logo">LayerAI</a>
+        <a href="index.html" class="logo">LayerAI</a>    <nav aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="articles.html" class="active" aria-current="page">Articles</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</div>
 
-        <nav aria-label="Main Navigation">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="articles.html" class="active" aria-current="page">Articles</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </div>
-</header>
+</header><main class="container page-content"><section class="articles-intro">
+    <span class="articles-label">LEARN &amp; CREATE</span>
 
-<main class="container page-content">
+    <h1>Articles &amp; Guides</h1>
 
-    <section class="articles-intro">
-        <span class="articles-label">LEARN &amp; CREATE</span>
+    <p class="lead">
+        Explore practical tutorials on image editing, AI-assisted workflows,
+        background removal, and creating more flexible graphic design projects.
+    </p>
+</section>
 
-        <h1>Articles &amp; Guides</h1>
+<section class="articles-grid" aria-label="Published articles">
 
-        <p class="lead">
-            Explore practical tutorials on image editing, AI-assisted workflows,
-            background removal, and creating more flexible graphic design projects.
-        </p>
-    </section>
+    <!-- Article 1 -->
+    <article class="article-card">
 
-    <section class="articles-grid" aria-label="Published articles">
+        <span class="article-category">Image Editing &amp; PSD</span>
 
-        <!-- Article 1 -->
-        <article class="article-card">
-
-            <span class="article-category">Image Editing &amp; PSD</span>
-
-            <h2>
-                <a href="convert-image-to-psd.html">
-                    How to Convert an Image to PSD with Separate Layers
-                </a>
-            </h2>
-
-            <p class="article-meta">Image Editing Guide · 8 min read</p>
-
-            <p>
-                Learn how to turn a flat image into a layered Photoshop document,
-                separate objects, understand text extraction, and discover common
-                challenges when reconstructing image backgrounds.
-            </p>
-
-            <a class="article-read-more" href="convert-image-to-psd.html">
-                Read Full Article &rarr;
+        <h2>
+            <a href="convert-image-to-psd.html">
+                How to Convert an Image to PSD with Separate Layers
             </a>
+        </h2>
 
-        </article>
-
-        <!-- Article 2 -->
-        <article class="article-card">
-
-            <span class="article-category">Free Image Editing</span>
-
-            <h2>
-                <a href="remove-background-image-free.html">
-                    How to Remove Background from an Image for Free
-                </a>
-            </h2>
-
-            <p class="article-meta">Background Removal Guide · 6 min read</p>
-
-            <p>
-                Discover free background removal methods, learn how AI creates
-                transparent cutouts, improve difficult edges, and choose the
-                right file format for your designs.
-            </p>
-
-            <a class="article-read-more" href="remove-background-image-free.html">
-                Read Full Article &rarr;
-            </a>
-
-        </article>
-
-    </section>
-
-    <section class="articles-note">
-        <h2>More Guides Coming Soon</h2>
+        <p class="article-meta">Image Editing Guide · 8 min read</p>
 
         <p>
-            We are developing more educational resources about AI image editing,
-            image segmentation, graphic design, and working with layered files.
-            Our goal is to provide practical information that helps readers
-            understand these techniques and use them in their own projects.
+            Learn how to turn a flat image into a layered Photoshop document,
+            separate objects, understand text extraction, and discover common
+            challenges when reconstructing image backgrounds.
         </p>
-    </section>
 
-</main>
+        <a class="article-read-more" href="convert-image-to-psd.html">
+            Read Full Article &rarr;
+        </a>
 
-<footer>
+    </article>
+
+    <!-- Article 2 -->
+    <article class="article-card">
+
+        <span class="article-category">Free Image Editing</span>
+
+        <h2>
+            <a href="remove-background-image-free.html">
+                How to Remove Background from an Image for Free
+            </a>
+        </h2>
+
+        <p class="article-meta">Background Removal Guide · 6 min read</p>
+
+        <p>
+            Discover free background removal methods, learn how AI creates
+            transparent cutouts, improve difficult edges, and choose the
+            right file format for your designs.
+        </p>
+
+        <a class="article-read-more" href="remove-background-image-free.html">
+            Read Full Article &rarr;
+        </a>
+
+    </article>
+
+    <!-- Article 3 -->
+    <article class="article-card">
+
+        <span class="article-category">JPG to PSD</span>
+
+        <h2>
+            <a href="make-psd-file-from-jpg.html">
+                How to Make a PSD File from a JPG Image
+            </a>
+        </h2>
+
+        <p class="article-meta">Photoshop Guide · 7 min read</p>
+
+        <p>
+            Learn how to save a JPG image as a PSD file, create separate
+            editable layers, and understand how AI tools can help separate
+            objects and text from a flattened image.
+        </p>
+
+        <a class="article-read-more" href="make-psd-file-from-jpg.html">
+            Read Full Article &rarr;
+        </a>
+
+    </article>
+
+</section>
+
+<section class="articles-note">
+    <h2>More Guides Coming Soon</h2>
+
+    <p>
+        We are developing more educational resources about AI image editing,
+        image segmentation, graphic design, and working with layered files.
+        Our goal is to provide practical information that helps readers
+        understand these techniques and use them in their own projects.
+    </p>
+</section>
+
+</main><footer>
     <div class="container">
-        <p>&copy; 2026 LayerAI. All rights reserved.</p>
-
-        <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Use</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
+        <p>&copy; 2026 LayerAI. All rights reserved.</p>    <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="contact.html">Contact Us</a>
     </div>
-</footer>
+</div>
 
-</body>
+</footer></body>
 </html>
