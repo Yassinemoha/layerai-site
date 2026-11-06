@@ -1,249 +1,172 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta name="google-site-verification" content="ypsNTj5In-qo2STALebQaEt11vIEJV6nIQ2NQtQpX-Y" />
-
-  <meta name="description" content="LayerAI — practical guides and creative tools for image editing, AI design, and Photoshop workflows.">
-
-  <title>LayerAI — Create More With AI</title>
-
+  <meta name="google-site-verification" content="ypsNTj5In-qo2STALebQaEt11vIEJV6nIQ2NQtQpX-Y">
+  <meta name="description" content="LayerAI brings creative image tools, layered PSD workflows and AI design resources together for creators around the world.">
+  <meta name="theme-color" content="#090b18">
+  <title>LayerAI — Creative Tools for Every Layer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="LayerAI home">
       <span class="brand-mark">L</span><span>Layer<span class="brand-ai">AI</span></span>
     </a>
-
     <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-
     <nav class="main-nav" id="mainNav">
-      <a class="active" href="#home">Home</a>
-      <a href="#tools">AI Tools</a>
-      <a href="#tutorials">Tutorials</a>
-      <a href="#articles">Blog</a>
-      <a href="about.html">About</a>
+      <a class="active" href="#home" data-i18n="nav_home">Home</a>
+      <a href="#tools" data-i18n="nav_tools">AI Tools</a>
+      <a href="#library" data-i18n="nav_library">PSD Library</a>
+      <a href="#tutorials" data-i18n="nav_learn">Learn</a>
+      <a href="articles.html" data-i18n="nav_blog">Blog</a>
+      <a href="about.html" data-i18n="nav_about">About</a>
     </nav>
-
-    <a class="header-cta" href="#tools">Explore tools <span>↗</span></a>
+    <div class="header-actions">
+      <label class="language-picker">
+        <span class="sr-only" data-i18n="language_label">Choose language</span>
+        <span aria-hidden="true">◎</span>
+        <select id="languageSelect" aria-label="Choose language">
+          <option value="en">English</option><option value="ar">العربية</option>
+          <option value="fr">Français</option><option value="es">Español</option>
+          <option value="de">Deutsch</option>
+        </select>
+      </label>
+      <a class="header-cta" href="#tools" data-i18n="nav_cta">Explore tools <span>↗</span></a>
+    </div>
   </header>
 
   <main>
     <section class="hero section-wrap" id="home">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="eyebrow-dot"></span> CREATIVE WORKFLOWS, MADE SIMPLER</div>
-
-        <h1>Make more possible<br>with <span class="gradient-text">LayerAI.</span></h1>
-
-        <p class="hero-lead">Explore practical AI tools, clear tutorials, and creative workflows that help you get more from every image.</p>
-
+        <div class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="eyebrow">CREATIVE WORKFLOWS, REIMAGINED</span></div>
+        <h1 data-i18n-html="hero_title">Your ideas.<br>Every layer.<br><span class="gradient-text">Made editable.</span></h1>
+        <p class="hero-lead" data-i18n="hero_text">Create, separate and explore visual ideas with practical AI-powered tools built for modern creators.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#tools">Explore AI tools <span>→</span></a>
-          <a class="button button-secondary" href="#tutorials"><span class="play-icon">▶</span> Browse tutorials</a>
+          <a class="button button-primary" href="#tools"><span data-i18n="hero_primary">Explore AI tools</span><span>→</span></a>
+          <a class="button button-secondary" href="#tutorials"><span class="play-icon">▶</span><span data-i18n="hero_secondary">Discover how it works</span></a>
         </div>
-
         <div class="hero-proof">
           <div class="proof-avatars"><span>L</span><span>A</span><span>✦</span></div>
-          <p><strong>Built for curious creators</strong><br><small>Learn, experiment, create.</small></p>
+          <p><strong data-i18n="proof_title">Made for creators everywhere</strong><br><small data-i18n="proof_text">One creative space. Many possibilities.</small></p>
         </div>
       </div>
 
-      <div class="hero-art" aria-label="Illustration of an image being separated into layers">
+      <div class="hero-art" aria-label="Layered creative workspace illustration">
         <div class="art-glow"></div>
-
-        <div class="floating-chip chip-top"><span class="chip-icon purple">✦</span> AI-powered workflow</div>
-
-        <div class="canvas-card">
-          <div class="canvas-top"><span class="tiny-dot"></span><span class="tiny-dot"></span><span class="tiny-dot"></span><span class="canvas-label">IMAGE WORKSPACE</span></div>
-
-          <div class="canvas-image">
-            <div class="image-orb"></div>
-            <div class="portrait-shape"><div class="portrait-hair"></div><div class="portrait-face"></div><div class="portrait-neck"></div><div class="portrait-shirt"></div></div>
-            <div class="selection-box"><i></i><i></i><i></i><i></i></div>
-            <span class="image-tag">Subject detected</span>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="workspace">
+          <div class="workspace-top"><span class="window-dots">● ● ●</span><span>LAYERAI / WORKSPACE</span><b>✦ AI</b></div>
+          <div class="workspace-scene">
+            <div class="scene-sun"></div><div class="scene-mountain mountain-back"></div>
+            <div class="scene-mountain mountain-front"></div><div class="scene-subject"></div>
+            <div class="scene-glow"></div>
           </div>
-
-          <div class="canvas-bottom"><span>sample-image.jpg</span><span class="status"><b></b> Ready to edit</span></div>
+          <div class="workspace-bottom"><span>creative-project.psd</span><span class="ready"><i></i><span data-i18n="ready">Layers organized</span></span></div>
         </div>
-
-        <div class="layers-card">
-          <div class="layers-heading"><span>Layers</span><span class="layers-menu">•••</span></div>
-
-          <div class="layer-row"><span class="layer-thumb thumb-bg">▧</span><span><b>Background</b><small>Image layer</small></span><span class="eye">◉</span></div>
-          <div class="layer-row selected"><span class="layer-thumb thumb-person">◒</span><span><b>Subject</b><small>Smart selection</small></span><span class="eye">◉</span></div>
-          <div class="layer-row"><span class="layer-thumb thumb-text">T</span><span><b>Text & details</b><small>Detected elements</small></span><span class="eye">◉</span></div>
-          <div class="layer-row"><span class="layer-thumb thumb-effect">✧</span><span><b>Effects</b><small>Creative layer</small></span><span class="eye">◉</span></div>
-
-          <div class="layer-footer"><span class="mini-check">✓</span> Organized for editing</div>
+        <div class="layers-panel">
+          <div class="layers-title"><b data-i18n="layers">Layers</b><span>•••</span></div>
+          <div class="layer-item"><i class="layer-thumb bg-thumb">▧</i><span><b data-i18n="background">Background</b><small>01</small></span><em>◉</em></div>
+          <div class="layer-item active-layer"><i class="layer-thumb subject-thumb">◒</i><span><b data-i18n="subject">Main subject</b><small>02</small></span><em>◉</em></div>
+          <div class="layer-item"><i class="layer-thumb object-thumb">◇</i><span><b data-i18n="objects">Objects</b><small>03</small></span><em>◉</em></div>
+          <div class="layer-item"><i class="layer-thumb text-thumb">T</i><span><b data-i18n="text_layer">Text & details</b><small>04</small></span><em>◉</em></div>
+          <div class="layer-item"><i class="layer-thumb effect-thumb">✧</i><span><b data-i18n="effects">Effects</b><small>05</small></span><em>◉</em></div>
+          <div class="layer-status">✓ <span data-i18n="editable">Ready for editing</span></div>
         </div>
-
-        <div class="floating-chip chip-bottom"><span class="chip-icon blue">↗</span> Ready for your workflow</div>
+        <div class="floating-tag tag-top">✦ <span data-i18n="tag_ai">AI-powered creativity</span></div>
+        <div class="floating-tag tag-bottom">PSD <span data-i18n="tag_export">Layered export</span></div>
       </div>
     </section>
 
     <section class="trust-strip">
-      <p>YOUR CREATIVE WORKFLOW, ONE STEP AT A TIME</p>
-      <div><span>✦ Image editing</span><span>◈ AI workflows</span><span>▤ Photoshop guides</span><span>✧ Design inspiration</span></div>
+      <p data-i18n="strip_title">A CREATIVE WORKSPACE FOR EVERY KIND OF MAKER</p>
+      <div><span>✦ <span data-i18n="strip_one">Image editing</span></span><span>◈ <span data-i18n="strip_two">AI design</span></span><span>▤ <span data-i18n="strip_three">Layered PSD</span></span><span>✧ <span data-i18n="strip_four">Creative learning</span></span></div>
     </section>
 
     <section class="section-wrap section-block" id="tools">
       <div class="section-heading">
-        <div>
-          <span class="section-kicker">TOOLS TO TRY</span>
-          <h2>Creative tools, <span class="gradient-text">simplified.</span></h2>
-          <p>Explore helpful tools and discover new ways to work with images.</p>
+        <div><span class="section-kicker" data-i18n="tools_kicker">THE LAYERAI TOOLKIT</span>
+          <h2 data-i18n-html="tools_title">Two ways to create.<br><span class="gradient-text">More room to imagine.</span></h2>
+          <p data-i18n="tools_intro">Start with an image you already have, or bring a completely new idea to life.</p>
         </div>
-
-        <a class="text-link" href="#tools">Explore all tools <span>→</span></a>
       </div>
-
       <div class="tool-grid">
-        <article class="tool-card tool-featured">
-          <div class="tool-visual visual-layers"><div class="mini-sheet sheet-one"></div><div class="mini-sheet sheet-two"></div><div class="mini-sheet sheet-three"></div><span class="visual-label">PSD</span></div>
+        <article class="tool-card">
+          <div class="tool-visual visual-psd"><div class="sheet sheet-a"></div><div class="sheet sheet-b"></div><div class="sheet sheet-c">PSD</div><span class="visual-corner">01 / EDIT</span></div>
           <div class="tool-card-body">
-            <span class="pill pill-live">In development</span>
-            <h3>Image to PSD</h3>
-            <p>Explore the idea of turning a flat image into editable layers. This tool is being developed separately.</p>
-            <a class="card-link" href="#coming-soon">Learn about the tool <span>→</span></a>
+            <span class="pill pill-live" data-i18n="tool_one_status">Image conversion</span>
+            <h3 data-i18n="tool_one_title">Image to PSD</h3>
+            <p data-i18n="tool_one_text">Turn an existing image into a layered PSD project. Separate visual elements and continue editing in your design workflow.</p>
+            <a class="card-link" href="https://psdai.cyou/" target="_blank" rel="noopener"><span data-i18n="tool_one_link">Open Image to PSD</span> <span>↗</span></a>
           </div>
         </article>
-
-        <article class="tool-card">
-          <div class="tool-visual visual-cutout"><div class="cutout-circle"></div><div class="cutout-person"></div><span class="sparkle">✦</span></div>
+        <article class="tool-card tool-card-glow">
+          <div class="tool-visual visual-generator"><div class="gen-window"><span>✦</span><i></i><i></i><i></i><b>AI</b></div><div class="gen-orb"></div><span class="visual-corner">02 / GENERATE</span></div>
           <div class="tool-card-body">
-            <span class="pill">Coming soon</span>
-            <h3>Background ideas</h3>
-            <p>Learn approaches for cleaner cutouts and better-looking image backgrounds.</p>
-            <a class="card-link" href="#tutorials">Read the guide <span>→</span></a>
-          </div>
-        </article>
-
-        <article class="tool-card">
-          <div class="tool-visual visual-type"><span class="type-big">Aa</span><span class="type-caption">TEXT + IMAGE</span><span class="type-star">✧</span></div>
-          <div class="tool-card-body">
-            <span class="pill">Learning resource</span>
-            <h3>Text extraction</h3>
-            <p>Understand how text detection works and what can affect its accuracy.</p>
-            <a class="card-link" href="#articles">Explore articles <span>→</span></a>
+            <span class="pill pill-soon" data-i18n="tool_two_status">Generative design</span>
+            <h3 data-i18n="tool_two_title">AI Design Generator</h3>
+            <p data-i18n="tool_two_text">Create a new design from a prompt, a reference image, or both—with the goal of making its elements independently editable.</p>
+            <a class="card-link" href="#generator"><span data-i18n="tool_two_link">Discover the generator</span> <span>↓</span></a>
           </div>
         </article>
       </div>
-
-      <p class="section-note" id="coming-soon">Tools shown as “Coming soon” are previews, not active services yet.</p>
+      <div class="generator-note" id="generator"><span>✦</span><p><b data-i18n="generator_note_title">A new way to build layered designs</b><br><span data-i18n="generator_note_text">The AI Design Generator is being developed as a separate tool. Its launch details will appear here when ready.</span></p></div>
     </section>
 
-    <section class="learn-band" id="tutorials">
+    <section class="library-section" id="library">
+      <div class="section-wrap library-inner">
+        <div class="section-heading library-heading">
+          <div><span class="section-kicker" data-i18n="library_kicker">THE CREATIVE LIBRARY</span>
+            <h2 data-i18n-html="library_title">Inspiration you can<br><span class="gradient-text">take into your workflow.</span></h2>
+            <p data-i18n="library_intro">A growing collection of layered resources and visual assets for your next project.</p>
+          </div>
+          <span class="library-format">PSD <b>+</b> PNG</span>
+        </div>
+        <div class="library-preview">
+          <div class="library-card"><div class="library-art art-purple"><span>PSD</span><i>✦</i></div><b data-i18n="lib_card_one">Layered design files</b><small data-i18n="lib_card_one_sub">Editable project resources</small></div>
+          <div class="library-card"><div class="library-art art-blue"><span class="art-stack"><i></i><i></i><i></i></span></div><b data-i18n="lib_card_two">Creative elements</b><small data-i18n="lib_card_two_sub">Assets for visual projects</small></div>
+          <div class="library-card"><div class="library-art art-pink"><span class="art-type">Aa</span><i>✧</i></div><b data-i18n="lib_card_three">Design inspiration</b><small data-i18n="lib_card_three_sub">Ideas to start from</small></div>
+          <div class="library-coming"><span>✦</span><b data-i18n="library_soon">The library is taking shape</b><p data-i18n="library_soon_text">Downloadable PSD and PNG resources will be added as they are ready and cleared for sharing.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="learn-section" id="tutorials">
       <div class="section-wrap learn-inner">
-        <div class="learn-copy">
-          <span class="section-kicker">LEARN SOMETHING NEW</span>
-          <h2>Better skills.<br><span class="gradient-text">Better creations.</span></h2>
-          <p>Practical explanations for image editing, Photoshop, and AI-assisted creative work—written for real projects, not just theory.</p>
-          <a class="button button-primary" href="#articles">Browse learning resources <span>→</span></a>
+        <div class="learn-copy"><span class="section-kicker" data-i18n="learn_kicker">LEARN. EXPERIMENT. CREATE.</span>
+          <h2 data-i18n-html="learn_title">Understand the layers<br><span class="gradient-text">behind every image.</span></h2>
+          <p data-i18n="learn_text">Explore practical guides about PSD files, image editing, AI workflows and creative techniques—step by step.</p>
+          <a class="button button-primary" href="articles.html"><span data-i18n="learn_button">Explore tutorials</span><span>→</span></a>
         </div>
-
-        <div class="learn-preview">
-          <div class="preview-window">
-            <div class="preview-bar"><span></span><span></span><span></span><b>QUICK GUIDE</b></div>
-            <div class="preview-content">
-              <div class="preview-icon">✦</div>
-              <div class="preview-lines"><i></i><i></i><i></i></div>
-              <div class="preview-steps"><span>01</span><span>02</span><span>03</span></div>
-            </div>
-          </div>
-
-          <div class="preview-note"><span class="note-icon">✓</span><span><b>Clear, practical steps</b><small>Learn at your own pace</small></span></div>
-        </div>
+        <div class="learn-visual"><div class="guide-card"><div class="guide-top"><span>● ● ●</span><b>LEARN / CREATE</b></div><div class="guide-content"><div class="guide-icon">✦</div><div class="guide-lines"><i></i><i></i><i></i></div><div class="guide-steps"><span>01</span><span>02</span><span>03</span></div></div></div><div class="guide-badge">✓ <span data-i18n="learn_badge">Practical, creator-focused guides</span></div></div>
       </div>
     </section>
 
-    <section class="section-wrap section-block" id="articles">
-      <div class="section-heading">
-        <div>
-          <span class="section-kicker">FROM THE BLOG</span>
-          <h2>Ideas worth <span class="gradient-text">exploring.</span></h2>
-          <p>Starter topics for creators who want to understand their tools better.</p>
-        </div>
-
-        <a class="text-link" href="articles.html">View all articles <span>→</span></a>
-      </div>
-
+    <section class="section-wrap section-block articles-section" id="articles">
+      <div class="section-heading"><div><span class="section-kicker" data-i18n="blog_kicker">FROM THE BLOG</span><h2 data-i18n-html="blog_title">Ideas worth <span class="gradient-text">exploring.</span></h2><p data-i18n="blog_intro">Helpful starting points for understanding your creative tools.</p></div><a class="text-link" href="articles.html"><span data-i18n="blog_all">View all articles</span> ↗</a></div>
       <div class="article-grid">
-        <a class="article-card" href="articles.html#psd">
-          <div class="article-art article-purple"><span class="file-icon">PSD</span><span class="art-spark">✦</span></div>
-          <div class="article-meta"><span>PHOTOSHOP BASICS</span><span>Beginner</span></div>
-          <h3>What Is a PSD File? A Beginner’s Guide</h3>
-          <p>Understand layers, editable projects, and when PSD files are useful.</p>
-          <span class="read-link">Read article <b>→</b></span>
-        </a>
-
-        <a class="article-card" href="articles.html#layers">
-          <div class="article-art article-blue"><div class="layer-stack"><i></i><i></i><i></i></div><span class="art-spark">✧</span></div>
-          <div class="article-meta"><span>IMAGE EDITING</span><span>5 min read</span></div>
-          <h3>Flat Images vs. Layered Images</h3>
-          <p>Learn what changes when separate elements can be edited individually.</p>
-          <span class="read-link">Read article <b>→</b></span>
-        </a>
-
-        <a class="article-card" href="articles.html#ai">
-          <div class="article-art article-peach"><div class="ai-orbit">AI</div><span class="art-spark">✦</span></div>
-          <div class="article-meta"><span>AI & DESIGN</span><span>Guide</span></div>
-          <h3>What AI Image Segmentation Can—and Can’t—Do</h3>
-          <p>A practical look at separating objects and why results can vary.</p>
-          <span class="read-link">Read article <b>→</b></span>
-        </a>
+        <a class="article-card" href="convert-image-to-psd.html"><div class="article-art article-purple"><span class="file-icon">PSD</span><i>✦</i></div><div class="article-meta">PHOTOSHOP BASICS <span>GUIDE</span></div><h3>How to Convert an Image to PSD</h3><p>Learn the basics of PSD files and editable image projects.</p><span class="read-link" data-i18n="read_article">Read article <b>→</b></span></a>
+        <a class="article-card" href="how-ai-image-layer-separation-works.html"><div class="article-art article-blue"><div class="article-stack"><i></i><i></i><i></i></div><i>✧</i></div><div class="article-meta">IMAGE EDITING <span>LEARN</span></div><h3>How AI Image Layer Separation Works</h3><p>Understand how image elements can be identified and separated.</p><span class="read-link" data-i18n="read_article">Read article <b>→</b></span></a>
+        <a class="article-card" href="best-free-ai-image-editing-tools.html"><div class="article-art article-pink"><span class="ai-orbit">AI</span><i>✦</i></div><div class="article-meta">AI & DESIGN <span>TOOLS</span></div><h3>Free AI Image Editing Tools</h3><p>Explore useful tools and techniques for creative image work.</p><span class="read-link" data-i18n="read_article">Read article <b>→</b></span></a>
       </div>
     </section>
 
-    <section class="bottom-cta section-wrap">
-      <div class="cta-spark">✦</div>
-      <div>
-        <span class="section-kicker">START EXPLORING</span>
-        <h2>Your next creative idea starts here.</h2>
-        <p>Discover useful workflows and keep learning with LayerAI.</p>
-      </div>
-      <a class="button button-white" href="#tools">Explore LayerAI <span>→</span></a>
-    </section>
+    <section class="bottom-cta section-wrap"><div class="cta-spark">✦</div><div><span class="section-kicker" data-i18n="cta_kicker">YOUR NEXT IDEA STARTS HERE</span><h2 data-i18n="cta_title">Make room for every layer.</h2><p data-i18n="cta_text">Explore tools, learn new techniques and create with LayerAI.</p></div><a class="button button-white" href="#tools"><span data-i18n="cta_button">Explore LayerAI</span> ↗</a></section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-main section-wrap">
-      <div class="footer-brand">
-        <a class="brand brand-footer" href="index.html"><span class="brand-mark">L</span><span>Layer<span class="brand-ai">AI</span></span></a>
-        <p>Practical tools and learning resources for image editing, AI, and creative workflows.</p>
-        <div class="socials"><a href="#" aria-label="Social link">in</a><a href="#" aria-label="Social link">𝕏</a><a href="#" aria-label="Social link">▶</a></div>
-      </div>
-
-      <div class="footer-column">
-        <h4>Explore</h4>
-        <a href="#tools">AI Tools</a>
-        <a href="#tutorials">Tutorials</a>
-        <a href="articles.html">Blog</a>
-      </div>
-
-      <div class="footer-column">
-        <h4>LayerAI</h4>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
-        <a href="articles.html">Resources</a>
-      </div>
-
-      <div class="footer-column">
-        <h4>Information</h4>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
-      </div>
+      <div class="footer-brand"><a class="brand brand-footer" href="index.html"><span class="brand-mark">L</span><span>Layer<span class="brand-ai">AI</span></span></a><p data-i18n="footer_text">Creative tools and learning resources for image makers everywhere.</p><span class="domain">psdai.cyou</span></div>
+      <div class="footer-column"><h4 data-i18n="footer_explore">Explore</h4><a href="#tools" data-i18n="nav_tools">AI Tools</a><a href="#library" data-i18n="nav_library">PSD Library</a><a href="articles.html" data-i18n="nav_blog">Blog</a></div>
+      <div class="footer-column"><h4 data-i18n="footer_layerai">LayerAI</h4><a href="about.html" data-i18n="nav_about">About</a><a href="contact.html" data-i18n="footer_contact">Contact</a></div>
+      <div class="footer-column"><h4 data-i18n="footer_info">Information</h4><a href="privacy.html" data-i18n="footer_privacy">Privacy Policy</a><a href="terms.html" data-i18n="footer_terms">Terms of Use</a></div>
     </div>
-
-    <div class="footer-bottom section-wrap">
-      <span>© <span id="year"></span> LayerAI. All rights reserved.</span>
-      <span>Made for curious creators <b>✦</b></span>
-    </div>
+    <div class="footer-bottom section-wrap"><span>© <span id="year"></span> LayerAI. <span data-i18n="rights">All rights reserved.</span></span><span data-i18n="footer_made">Made for creators everywhere ✦</span></div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
