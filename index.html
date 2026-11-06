@@ -1,172 +1,457 @@
-<!doctype html>
-<html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LayerAI - حوّل أفكارك وصورك إلى تصاميم احترافية بطبقات PSD قابلة للتعديل.">
   <meta name="google-site-verification" content="ypsNTj5In-qo2STALebQaEt11vIEJV6nIQ2NQtQpX-Y">
-  <meta name="description" content="LayerAI brings creative image tools, layered PSD workflows and AI design resources together for creators around the world.">
-  <meta name="theme-color" content="#090b18">
-  <title>LayerAI — Creative Tools for Every Layer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <title>LayerAI - تصميم بلا حدود</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: #fff;
+      color: #202033;
+      margin: 0;
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 15% 20%, rgba(168,85,247,.10), transparent 30%),
+        radial-gradient(circle at 85% 80%, rgba(59,130,246,.10), transparent 30%),
+        #fff;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg,#7c3aed,#2563eb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .primary-btn {
+      background: linear-gradient(100deg,#7c3aed,#4f46e5);
+      transition: .25s;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(124,58,237,.22);
+    }
+
+    .card {
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 35px rgba(30,27,75,.10);
+    }
+
+    .hero-image {
+      filter: drop-shadow(0 20px 30px rgba(79,70,229,.15));
+    }
+
+    .library-card img {
+      transition: transform .4s;
+    }
+
+    .library-card:hover img {
+      transform: scale(1.06);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    @media(max-width:768px) {
+      .hero-title { font-size: 2.35rem; }
+    }
+  </style>
 </head>
+
 <body>
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="LayerAI home">
-      <span class="brand-mark">L</span><span>Layer<span class="brand-ai">AI</span></span>
+
+<!-- NAVBAR -->
+<nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+
+    <a href="index.html" class="flex items-center gap-2">
+      <i class="fa-solid fa-layer-group text-3xl text-purple-600"></i>
+      <span class="text-2xl font-extrabold text-indigo-950">LayerAI</span>
     </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-    <nav class="main-nav" id="mainNav">
-      <a class="active" href="#home" data-i18n="nav_home">Home</a>
-      <a href="#tools" data-i18n="nav_tools">AI Tools</a>
-      <a href="#library" data-i18n="nav_library">PSD Library</a>
-      <a href="#tutorials" data-i18n="nav_learn">Learn</a>
-      <a href="articles.html" data-i18n="nav_blog">Blog</a>
-      <a href="about.html" data-i18n="nav_about">About</a>
-    </nav>
-    <div class="header-actions">
-      <label class="language-picker">
-        <span class="sr-only" data-i18n="language_label">Choose language</span>
-        <span aria-hidden="true">◎</span>
-        <select id="languageSelect" aria-label="Choose language">
-          <option value="en">English</option><option value="ar">العربية</option>
-          <option value="fr">Français</option><option value="es">Español</option>
-          <option value="de">Deutsch</option>
-        </select>
-      </label>
-      <a class="header-cta" href="#tools" data-i18n="nav_cta">Explore tools <span>↗</span></a>
+
+    <div class="hidden md:flex items-center gap-7 text-sm font-bold text-gray-600">
+      <a href="index.html" class="text-purple-600">الرئيسية</a>
+      <a href="#tools" class="hover:text-purple-600">الأدوات</a>
+      <a href="#library" class="hover:text-purple-600">مكتبة التصاميم</a>
+      <a href="articles.html" class="hover:text-purple-600">المقالات</a>
+      <a href="about.html" class="hover:text-purple-600">حولنا</a>
+      <a href="contact.html" class="hover:text-purple-600">اتصل بنا</a>
     </div>
-  </header>
 
-  <main>
-    <section class="hero section-wrap" id="home">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="eyebrow">CREATIVE WORKFLOWS, REIMAGINED</span></div>
-        <h1 data-i18n-html="hero_title">Your ideas.<br>Every layer.<br><span class="gradient-text">Made editable.</span></h1>
-        <p class="hero-lead" data-i18n="hero_text">Create, separate and explore visual ideas with practical AI-powered tools built for modern creators.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#tools"><span data-i18n="hero_primary">Explore AI tools</span><span>→</span></a>
-          <a class="button button-secondary" href="#tutorials"><span class="play-icon">▶</span><span data-i18n="hero_secondary">Discover how it works</span></a>
-        </div>
-        <div class="hero-proof">
-          <div class="proof-avatars"><span>L</span><span>A</span><span>✦</span></div>
-          <p><strong data-i18n="proof_title">Made for creators everywhere</strong><br><small data-i18n="proof_text">One creative space. Many possibilities.</small></p>
-        </div>
+    <a href="#tools" class="primary-btn text-white px-5 py-2.5 rounded-full font-bold text-sm">
+      ابدأ مجاناً
+    </a>
+
+  </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero py-16 md:py-24 px-5 overflow-hidden">
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+    <div>
+      <span class="inline-block bg-purple-50 text-purple-700 px-4 py-2 rounded-full text-sm font-bold mb-6">
+        <i class="fa-solid fa-wand-magic-sparkles ml-2"></i>
+        مستقبل التصميم يبدأ هنا
+      </span>
+
+      <h1 class="hero-title text-5xl md:text-6xl font-extrabold leading-tight text-indigo-950 mb-6">
+        حوّل أفكارك إلى
+        <span class="gradient-text">تصاميم احترافية بطبقات!</span>
+      </h1>
+
+      <p class="text-gray-500 text-lg leading-9 mb-8">
+        مع LayerAI، أنشئ تصاميم مذهلة من الصفر أو حوّل صورك إلى ملفات PSD
+        بطبقات مستقلة قابلة للتعديل بسهولة.
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="#tools" class="primary-btn text-white px-8 py-3.5 rounded-full font-bold shadow-lg">
+          <i class="fa-solid fa-rocket ml-2"></i>
+          ابدأ الآن مجاناً
+        </a>
+
+        <a href="#tools" class="border border-purple-200 text-purple-700 px-8 py-3.5 rounded-full font-bold hover:bg-purple-50 transition">
+          اكتشف الأدوات
+          <i class="fa-solid fa-arrow-left mr-2"></i>
+        </a>
       </div>
 
-      <div class="hero-art" aria-label="Layered creative workspace illustration">
-        <div class="art-glow"></div>
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <div class="workspace">
-          <div class="workspace-top"><span class="window-dots">● ● ●</span><span>LAYERAI / WORKSPACE</span><b>✦ AI</b></div>
-          <div class="workspace-scene">
-            <div class="scene-sun"></div><div class="scene-mountain mountain-back"></div>
-            <div class="scene-mountain mountain-front"></div><div class="scene-subject"></div>
-            <div class="scene-glow"></div>
-          </div>
-          <div class="workspace-bottom"><span>creative-project.psd</span><span class="ready"><i></i><span data-i18n="ready">Layers organized</span></span></div>
-        </div>
-        <div class="layers-panel">
-          <div class="layers-title"><b data-i18n="layers">Layers</b><span>•••</span></div>
-          <div class="layer-item"><i class="layer-thumb bg-thumb">▧</i><span><b data-i18n="background">Background</b><small>01</small></span><em>◉</em></div>
-          <div class="layer-item active-layer"><i class="layer-thumb subject-thumb">◒</i><span><b data-i18n="subject">Main subject</b><small>02</small></span><em>◉</em></div>
-          <div class="layer-item"><i class="layer-thumb object-thumb">◇</i><span><b data-i18n="objects">Objects</b><small>03</small></span><em>◉</em></div>
-          <div class="layer-item"><i class="layer-thumb text-thumb">T</i><span><b data-i18n="text_layer">Text & details</b><small>04</small></span><em>◉</em></div>
-          <div class="layer-item"><i class="layer-thumb effect-thumb">✧</i><span><b data-i18n="effects">Effects</b><small>05</small></span><em>◉</em></div>
-          <div class="layer-status">✓ <span data-i18n="editable">Ready for editing</span></div>
-        </div>
-        <div class="floating-tag tag-top">✦ <span data-i18n="tag_ai">AI-powered creativity</span></div>
-        <div class="floating-tag tag-bottom">PSD <span data-i18n="tag_export">Layered export</span></div>
+      <div class="flex flex-wrap gap-6 mt-10 text-sm text-gray-500">
+        <span><i class="fa-solid fa-circle-check text-green-500 ml-2"></i>أدوات مبتكرة</span>
+        <span><i class="fa-solid fa-layer-group text-purple-500 ml-2"></i>تصاميم بطبقات</span>
+        <span><i class="fa-solid fa-download text-blue-500 ml-2"></i>تصدير PSD</span>
       </div>
-    </section>
-
-    <section class="trust-strip">
-      <p data-i18n="strip_title">A CREATIVE WORKSPACE FOR EVERY KIND OF MAKER</p>
-      <div><span>✦ <span data-i18n="strip_one">Image editing</span></span><span>◈ <span data-i18n="strip_two">AI design</span></span><span>▤ <span data-i18n="strip_three">Layered PSD</span></span><span>✧ <span data-i18n="strip_four">Creative learning</span></span></div>
-    </section>
-
-    <section class="section-wrap section-block" id="tools">
-      <div class="section-heading">
-        <div><span class="section-kicker" data-i18n="tools_kicker">THE LAYERAI TOOLKIT</span>
-          <h2 data-i18n-html="tools_title">Two ways to create.<br><span class="gradient-text">More room to imagine.</span></h2>
-          <p data-i18n="tools_intro">Start with an image you already have, or bring a completely new idea to life.</p>
-        </div>
-      </div>
-      <div class="tool-grid">
-        <article class="tool-card">
-          <div class="tool-visual visual-psd"><div class="sheet sheet-a"></div><div class="sheet sheet-b"></div><div class="sheet sheet-c">PSD</div><span class="visual-corner">01 / EDIT</span></div>
-          <div class="tool-card-body">
-            <span class="pill pill-live" data-i18n="tool_one_status">Image conversion</span>
-            <h3 data-i18n="tool_one_title">Image to PSD</h3>
-            <p data-i18n="tool_one_text">Turn an existing image into a layered PSD project. Separate visual elements and continue editing in your design workflow.</p>
-            <a class="card-link" href="https://psdai.cyou/" target="_blank" rel="noopener"><span data-i18n="tool_one_link">Open Image to PSD</span> <span>↗</span></a>
-          </div>
-        </article>
-        <article class="tool-card tool-card-glow">
-          <div class="tool-visual visual-generator"><div class="gen-window"><span>✦</span><i></i><i></i><i></i><b>AI</b></div><div class="gen-orb"></div><span class="visual-corner">02 / GENERATE</span></div>
-          <div class="tool-card-body">
-            <span class="pill pill-soon" data-i18n="tool_two_status">Generative design</span>
-            <h3 data-i18n="tool_two_title">AI Design Generator</h3>
-            <p data-i18n="tool_two_text">Create a new design from a prompt, a reference image, or both—with the goal of making its elements independently editable.</p>
-            <a class="card-link" href="#generator"><span data-i18n="tool_two_link">Discover the generator</span> <span>↓</span></a>
-          </div>
-        </article>
-      </div>
-      <div class="generator-note" id="generator"><span>✦</span><p><b data-i18n="generator_note_title">A new way to build layered designs</b><br><span data-i18n="generator_note_text">The AI Design Generator is being developed as a separate tool. Its launch details will appear here when ready.</span></p></div>
-    </section>
-
-    <section class="library-section" id="library">
-      <div class="section-wrap library-inner">
-        <div class="section-heading library-heading">
-          <div><span class="section-kicker" data-i18n="library_kicker">THE CREATIVE LIBRARY</span>
-            <h2 data-i18n-html="library_title">Inspiration you can<br><span class="gradient-text">take into your workflow.</span></h2>
-            <p data-i18n="library_intro">A growing collection of layered resources and visual assets for your next project.</p>
-          </div>
-          <span class="library-format">PSD <b>+</b> PNG</span>
-        </div>
-        <div class="library-preview">
-          <div class="library-card"><div class="library-art art-purple"><span>PSD</span><i>✦</i></div><b data-i18n="lib_card_one">Layered design files</b><small data-i18n="lib_card_one_sub">Editable project resources</small></div>
-          <div class="library-card"><div class="library-art art-blue"><span class="art-stack"><i></i><i></i><i></i></span></div><b data-i18n="lib_card_two">Creative elements</b><small data-i18n="lib_card_two_sub">Assets for visual projects</small></div>
-          <div class="library-card"><div class="library-art art-pink"><span class="art-type">Aa</span><i>✧</i></div><b data-i18n="lib_card_three">Design inspiration</b><small data-i18n="lib_card_three_sub">Ideas to start from</small></div>
-          <div class="library-coming"><span>✦</span><b data-i18n="library_soon">The library is taking shape</b><p data-i18n="library_soon_text">Downloadable PSD and PNG resources will be added as they are ready and cleared for sharing.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="learn-section" id="tutorials">
-      <div class="section-wrap learn-inner">
-        <div class="learn-copy"><span class="section-kicker" data-i18n="learn_kicker">LEARN. EXPERIMENT. CREATE.</span>
-          <h2 data-i18n-html="learn_title">Understand the layers<br><span class="gradient-text">behind every image.</span></h2>
-          <p data-i18n="learn_text">Explore practical guides about PSD files, image editing, AI workflows and creative techniques—step by step.</p>
-          <a class="button button-primary" href="articles.html"><span data-i18n="learn_button">Explore tutorials</span><span>→</span></a>
-        </div>
-        <div class="learn-visual"><div class="guide-card"><div class="guide-top"><span>● ● ●</span><b>LEARN / CREATE</b></div><div class="guide-content"><div class="guide-icon">✦</div><div class="guide-lines"><i></i><i></i><i></i></div><div class="guide-steps"><span>01</span><span>02</span><span>03</span></div></div></div><div class="guide-badge">✓ <span data-i18n="learn_badge">Practical, creator-focused guides</span></div></div>
-      </div>
-    </section>
-
-    <section class="section-wrap section-block articles-section" id="articles">
-      <div class="section-heading"><div><span class="section-kicker" data-i18n="blog_kicker">FROM THE BLOG</span><h2 data-i18n-html="blog_title">Ideas worth <span class="gradient-text">exploring.</span></h2><p data-i18n="blog_intro">Helpful starting points for understanding your creative tools.</p></div><a class="text-link" href="articles.html"><span data-i18n="blog_all">View all articles</span> ↗</a></div>
-      <div class="article-grid">
-        <a class="article-card" href="convert-image-to-psd.html"><div class="article-art article-purple"><span class="file-icon">PSD</span><i>✦</i></div><div class="article-meta">PHOTOSHOP BASICS <span>GUIDE</span></div><h3>How to Convert an Image to PSD</h3><p>Learn the basics of PSD files and editable image projects.</p><span class="read-link" data-i18n="read_article">Read article <b>→</b></span></a>
-        <a class="article-card" href="how-ai-image-layer-separation-works.html"><div class="article-art article-blue"><div class="article-stack"><i></i><i></i><i></i></div><i>✧</i></div><div class="article-meta">IMAGE EDITING <span>LEARN</span></div><h3>How AI Image Layer Separation Works</h3><p>Understand how image elements can be identified and separated.</p><span class="read-link" data-i18n="read_article">Read article <b>→</b></span></a>
-        <a class="article-card" href="best-free-ai-image-editing-tools.html"><div class="article-art article-pink"><span class="ai-orbit">AI</span><i>✦</i></div><div class="article-meta">AI & DESIGN <span>TOOLS</span></div><h3>Free AI Image Editing Tools</h3><p>Explore useful tools and techniques for creative image work.</p><span class="read-link" data-i18n="read_article">Read article <b>→</b></span></a>
-      </div>
-    </section>
-
-    <section class="bottom-cta section-wrap"><div class="cta-spark">✦</div><div><span class="section-kicker" data-i18n="cta_kicker">YOUR NEXT IDEA STARTS HERE</span><h2 data-i18n="cta_title">Make room for every layer.</h2><p data-i18n="cta_text">Explore tools, learn new techniques and create with LayerAI.</p></div><a class="button button-white" href="#tools"><span data-i18n="cta_button">Explore LayerAI</span> ↗</a></section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-main section-wrap">
-      <div class="footer-brand"><a class="brand brand-footer" href="index.html"><span class="brand-mark">L</span><span>Layer<span class="brand-ai">AI</span></span></a><p data-i18n="footer_text">Creative tools and learning resources for image makers everywhere.</p><span class="domain">psdai.cyou</span></div>
-      <div class="footer-column"><h4 data-i18n="footer_explore">Explore</h4><a href="#tools" data-i18n="nav_tools">AI Tools</a><a href="#library" data-i18n="nav_library">PSD Library</a><a href="articles.html" data-i18n="nav_blog">Blog</a></div>
-      <div class="footer-column"><h4 data-i18n="footer_layerai">LayerAI</h4><a href="about.html" data-i18n="nav_about">About</a><a href="contact.html" data-i18n="footer_contact">Contact</a></div>
-      <div class="footer-column"><h4 data-i18n="footer_info">Information</h4><a href="privacy.html" data-i18n="footer_privacy">Privacy Policy</a><a href="terms.html" data-i18n="footer_terms">Terms of Use</a></div>
     </div>
-    <div class="footer-bottom section-wrap"><span>© <span id="year"></span> LayerAI. <span data-i18n="rights">All rights reserved.</span></span><span data-i18n="footer_made">Made for creators everywhere ✦</span></div>
-  </footer>
-  <script src="script.js"></script>
+
+    <div class="relative">
+      <div class="absolute inset-5 bg-purple-100 rounded-full blur-3xl opacity-50"></div>
+
+      <img
+        class="hero-image relative w-full rounded-3xl object-cover"
+        src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1100&q=85"
+        alt="مشهد إبداعي للطبيعة والمحيط"
+        loading="eager">
+
+      <div class="absolute bottom-5 right-5 bg-white/95 backdrop-blur rounded-2xl p-4 shadow-xl">
+        <div class="flex items-center gap-3">
+          <div class="bg-purple-100 text-purple-700 w-11 h-11 rounded-xl flex items-center justify-center">
+            <i class="fa-solid fa-layer-group text-xl"></i>
+          </div>
+          <div>
+            <p class="font-extrabold text-indigo-950">تصميم متعدد الطبقات</p>
+            <p class="text-xs text-gray-500">حرية أكبر في التعديل</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- TOOLS -->
+<section id="tools" class="py-20 px-5 bg-gray-50">
+
+  <div class="max-w-7xl mx-auto">
+
+    <div class="text-center mb-12">
+      <span class="text-purple-600 font-bold">اكتشف إمكانياتنا</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-indigo-950 mt-3">
+        أدوات LayerAI الرئيسية
+      </h2>
+      <p class="text-gray-500 mt-4">كل ما تحتاجه لتحويل أفكارك إلى تصاميم قابلة للتعديل.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- TOOL 1 -->
+      <div class="card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+
+        <img
+          src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=85"
+          alt="تصميم إبداعي"
+          class="w-full h-64 object-cover"
+          loading="lazy">
+
+        <div class="p-8">
+          <div class="text-purple-600 text-3xl mb-4">
+            <i class="fa-solid fa-images"></i>
+          </div>
+
+          <h3 class="text-2xl font-extrabold text-indigo-950 mb-3">
+            تحويل الصور إلى PSD
+          </h3>
+
+          <p class="text-gray-500 leading-8 mb-6">
+            ارفع صورتك وحوّلها إلى ملف Photoshop يحتوي على عناصر وطبقات
+            مستقلة لتسهيل التعديل والعمل الإبداعي.
+          </p>
+
+          <a href="https://psdai.cyou/"
+             class="inline-block primary-btn text-white px-7 py-3 rounded-full font-bold">
+            جرب الأداة الآن
+            <i class="fa-solid fa-arrow-left mr-2"></i>
+          </a>
+        </div>
+      </div>
+
+
+      <!-- TOOL 2 -->
+      <div class="card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+
+        <img
+          src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1000&q=85"
+          alt="مشهد فني خيالي"
+          class="w-full h-64 object-cover"
+          loading="lazy">
+
+        <div class="p-8">
+          <div class="text-blue-600 text-3xl mb-4">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+
+          <h3 class="text-2xl font-extrabold text-indigo-950 mb-3">
+            مولد التصاميم الذكي
+          </h3>
+
+          <p class="text-gray-500 leading-8 mb-6">
+            أنشئ تصاميم جديدة من الصفر باستخدام وصف نصي أو صورة مرجعية،
+            مع إمكانية إنشاء عناصر مستقلة قابلة للتحرير.
+          </p>
+
+          <span class="inline-block bg-blue-50 text-blue-700 px-6 py-3 rounded-full font-bold">
+            <i class="fa-solid fa-code mr-2"></i>
+            قيد التطوير
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- LIBRARY -->
+<section id="library" class="py-20 px-5">
+
+  <div class="max-w-7xl mx-auto">
+
+    <div class="flex flex-wrap justify-between items-center gap-4 mb-10">
+
+      <div>
+        <span class="text-purple-600 font-bold">موارد إبداعية</span>
+        <h2 class="text-3xl font-extrabold text-indigo-950 mt-2">
+          مكتبة PSD وPNG المجانية
+        </h2>
+        <p class="text-gray-500 mt-2">اكتشف موارد تساعدك على تطوير تصاميمك.</p>
+      </div>
+
+      <a href="articles.html" class="border border-purple-200 text-purple-700 px-5 py-3 rounded-full font-bold hover:bg-purple-50 transition">
+        اكتشف المزيد
+        <i class="fa-solid fa-arrow-left mr-2"></i>
+      </a>
+
+    </div>
+
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div class="library-card card bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+        <div class="overflow-hidden h-48">
+          <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=600&q=80"
+               alt="تصميم إعلاني" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="p-4">
+          <h3 class="font-bold text-indigo-950">تصميم إعلاني</h3>
+          <div class="flex gap-2 mt-3">
+            <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded">PSD</span>
+            <span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded">PNG</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="library-card card bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+        <div class="overflow-hidden h-48">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80"
+               alt="تصميم مساحة عمل" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="p-4">
+          <h3 class="font-bold text-indigo-950">خلفيات إبداعية</h3>
+          <div class="flex gap-2 mt-3">
+            <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded">PSD</span>
+            <span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded">PNG</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="library-card card bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+        <div class="overflow-hidden h-48">
+          <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=600&q=80"
+               alt="منظر طبيعي إبداعي" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="p-4">
+          <h3 class="font-bold text-indigo-950">مناظر طبيعية</h3>
+          <div class="flex gap-2 mt-3">
+            <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded">PSD</span>
+            <span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded">PNG</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="library-card card bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+        <div class="overflow-hidden h-48">
+          <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=600&q=80"
+               alt="خلفية فنية ملونة" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="p-4">
+          <h3 class="font-bold text-indigo-950">خلفيات فنية</h3>
+          <div class="flex gap-2 mt-3">
+            <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded">PSD</span>
+            <span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded">PNG</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="text-xs text-gray-400 text-center mt-6">
+      الصور المعروضة أمثلة توضيحية، وليست ملفات PSD أو PNG قابلة للتنزيل.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- FEATURES -->
+<section class="py-14 px-5 bg-gray-50 border-y border-gray-100">
+
+  <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+    <div>
+      <i class="fa-solid fa-wand-magic-sparkles text-purple-600 text-3xl mb-3"></i>
+      <h3 class="font-bold text-indigo-950">أدوات مبتكرة</h3>
+      <p class="text-sm text-gray-500 mt-2">حلول إبداعية</p>
+    </div>
+
+    <div>
+      <i class="fa-solid fa-layer-group text-blue-600 text-3xl mb-3"></i>
+      <h3 class="font-bold text-indigo-950">طبقات مستقلة</h3>
+      <p class="text-sm text-gray-500 mt-2">تحكم أكبر في التصميم</p>
+    </div>
+
+    <div>
+      <i class="fa-solid fa-bolt text-orange-500 text-3xl mb-3"></i>
+      <h3 class="font-bold text-indigo-950">سهولة الاستخدام</h3>
+      <p class="text-sm text-gray-500 mt-2">واجهة بسيطة وسريعة</p>
+    </div>
+
+    <div>
+      <i class="fa-solid fa-globe text-green-600 text-3xl mb-3"></i>
+      <h3 class="font-bold text-indigo-950">للمبدعين حول العالم</h3>
+      <p class="text-sm text-gray-500 mt-2">رؤية عالمية</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="py-20 px-5">
+
+  <div class="max-w-7xl mx-auto rounded-3xl p-10 md:p-14 text-white bg-gradient-to-r from-purple-700 to-blue-600 flex flex-col md:flex-row justify-between items-center gap-8 shadow-xl">
+
+    <div>
+      <h2 class="text-3xl font-extrabold mb-4">
+        أطلق العنان لإبداعك مع LayerAI
+      </h2>
+      <p class="text-purple-100 text-lg">
+        اكتشف، أنشئ، وطوّر تصاميمك بطريقة جديدة.
+      </p>
+    </div>
+
+    <a href="#tools" class="bg-white text-purple-700 px-8 py-4 rounded-full font-extrabold hover:bg-gray-100 transition whitespace-nowrap">
+      ابدأ الآن
+      <i class="fa-solid fa-arrow-left mr-2"></i>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-indigo-950 text-white pt-14 pb-8 px-5">
+
+  <div class="max-w-7xl mx-auto">
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-10 pb-10">
+
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <i class="fa-solid fa-layer-group text-3xl text-purple-400"></i>
+          <span class="text-2xl font-extrabold">LayerAI</span>
+        </div>
+        <p class="text-gray-300 leading-8 text-sm">
+          منصة إبداعية تجمع بين الذكاء الاصطناعي والتصميم متعدد الطبقات.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-lg mb-4">روابط سريعة</h3>
+        <ul class="space-y-3 text-gray-300 text-sm">
+          <li><a href="index.html" class="hover:text-purple-300">الرئيسية</a></li>
+          <li><a href="#tools" class="hover:text-purple-300">الأدوات</a></li>
+          <li><a href="#library" class="hover:text-purple-300">المكتبة</a></li>
+          <li><a href="articles.html" class="hover:text-purple-300">المقالات</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-lg mb-4">معلومات</h3>
+        <ul class="space-y-3 text-gray-300 text-sm">
+          <li><a href="about.html" class="hover:text-purple-300">من نحن</a></li>
+          <li><a href="contact.html" class="hover:text-purple-300">اتصل بنا</a></li>
+          <li><a href="privacy.html" class="hover:text-purple-300">سياسة الخصوصية</a></li>
+          <li><a href="terms.html" class="hover:text-purple-300">شروط الاستخدام</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-lg mb-4">أدواتنا</h3>
+        <ul class="space-y-3 text-gray-300 text-sm">
+          <li><a href="https://psdai.cyou/" class="hover:text-purple-300">تحويل الصور إلى PSD</a></li>
+          <li><span class="text-gray-400">مولد التصاميم الذكي - قريباً</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="border-t border-indigo-800 pt-6 text-center text-gray-400 text-sm">
+      © 2026 LayerAI. جميع الحقوق محفوظة.
+    </div>
+
+  </div>
+</footer>
+
 </body>
 </html>
