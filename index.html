@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="LayerAI - حوّل أفكارك وصورك إلى تصاميم احترافية بطبقات PSD قابلة للتعديل.">
   <meta name="google-site-verification" content="ypsNTj5In-qo2STALebQaEt11vIEJV6nIQ2NQtQpX-Y">
+  <meta name="robots" content="index, follow">
   <title>LayerAI - تصميم بلا حدود</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -13,6 +14,7 @@
 
   <style>
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Tajawal', sans-serif;
@@ -44,9 +46,7 @@
       box-shadow: 0 12px 25px rgba(124,58,237,.22);
     }
 
-    .card {
-      transition: .3s;
-    }
+    .card { transition: .3s; }
 
     .card:hover {
       transform: translateY(-6px);
@@ -57,15 +57,77 @@
       filter: drop-shadow(0 20px 30px rgba(79,70,229,.15));
     }
 
-    .library-card img {
+    .library-card {
+      background: white;
+      border: 1px solid #f0eff5;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(30,27,75,.04);
+      transition: .3s;
+    }
+
+    .library-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(30,27,75,.10);
+    }
+
+    .library-image {
+      height: 190px;
+      overflow: hidden;
+    }
+
+    .library-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       transition: transform .4s;
     }
 
-    .library-card:hover img {
+    .library-card:hover .library-image img {
       transform: scale(1.06);
     }
 
-    html { scroll-behavior: smooth; }
+    .library-filter {
+      padding: 10px 20px;
+      border: 1px solid #e9e5f5;
+      border-radius: 30px;
+      background: white;
+      color: #55516b;
+      font-weight: 700;
+      font-size: 14px;
+      transition: .2s;
+      cursor: pointer;
+    }
+
+    .library-filter:hover,
+    .library-filter.active-filter {
+      background: #7c3aed;
+      color: white;
+      border-color: #7c3aed;
+    }
+
+    .format-badge {
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .psd-badge { background: #dbeafe; color: #1d4ed8; }
+    .png-badge { background: #dcfce7; color: #15803d; }
+
+    .download-disabled {
+      flex: 1;
+      padding: 10px 8px;
+      border-radius: 10px;
+      background: #f3f4f6;
+      color: #9ca3af;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: not-allowed;
+    }
+
+    .library-card.hidden { display: none; }
 
     @media(max-width:768px) {
       .hero-title { font-size: 2.35rem; }
@@ -78,7 +140,6 @@
 <!-- NAVBAR -->
 <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
-
     <a href="index.html" class="flex items-center gap-2">
       <i class="fa-solid fa-layer-group text-3xl text-purple-600"></i>
       <span class="text-2xl font-extrabold text-indigo-950">LayerAI</span>
@@ -96,16 +157,12 @@
     <a href="#tools" class="primary-btn text-white px-5 py-2.5 rounded-full font-bold text-sm">
       ابدأ مجاناً
     </a>
-
   </div>
 </nav>
 
-
 <!-- HERO -->
 <section class="hero py-16 md:py-24 px-5 overflow-hidden">
-
   <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-
     <div>
       <span class="inline-block bg-purple-50 text-purple-700 px-4 py-2 rounded-full text-sm font-bold mb-6">
         <i class="fa-solid fa-wand-magic-sparkles ml-2"></i>
@@ -143,7 +200,6 @@
 
     <div class="relative">
       <div class="absolute inset-5 bg-purple-100 rounded-full blur-3xl opacity-50"></div>
-
       <img
         class="hero-image relative w-full rounded-3xl object-cover"
         src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1100&q=85"
@@ -162,16 +218,12 @@
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
-
 <!-- TOOLS -->
 <section id="tools" class="py-20 px-5 bg-gray-50">
-
   <div class="max-w-7xl mx-auto">
-
     <div class="text-center mb-12">
       <span class="text-purple-600 font-bold">اكتشف إمكانياتنا</span>
       <h2 class="text-3xl md:text-4xl font-extrabold text-indigo-950 mt-3">
@@ -184,7 +236,6 @@
 
       <!-- TOOL 1 -->
       <div class="card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
-
         <img
           src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=85"
           alt="تصميم إبداعي"
@@ -213,10 +264,8 @@
         </div>
       </div>
 
-
       <!-- TOOL 2 -->
       <div class="card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
-
         <img
           src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1000&q=85"
           alt="مشهد فني خيالي"
@@ -237,173 +286,266 @@
             مع إمكانية إنشاء عناصر مستقلة قابلة للتحرير.
           </p>
 
-          <span class="inline-block bg-blue-50 text-blue-700 px-6 py-3 rounded-full font-bold">
-            <i class="fa-solid fa-code mr-2"></i>
-            قيد التطوير
-          </span>
+          <a href="https://layerai.yassdada91.workers.dev/"
+             class="inline-block bg-blue-50 text-blue-700 px-6 py-3 rounded-full font-bold hover:bg-blue-100 transition">
+            جرب المولد الذكي
+            <i class="fa-solid fa-arrow-left mr-2"></i>
+          </a>
         </div>
       </div>
 
     </div>
   </div>
 </section>
-
 
 <!-- LIBRARY -->
-<section id="library" class="py-20 px-5">
-
+<section id="library" class="py-20 px-5 bg-white">
   <div class="max-w-7xl mx-auto">
 
-    <div class="flex flex-wrap justify-between items-center gap-4 mb-10">
+    <div class="text-center mb-10">
+      <span class="text-purple-600 font-bold">موارد إبداعية مجانية</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-indigo-950 mt-3">
+        مكتبة PSD وPNG
+      </h2>
+      <p class="text-gray-500 mt-4 leading-8">
+        اكتشف تصاميم وموارد تساعدك على تطوير أعمالك الإبداعية.
+      </p>
+    </div>
 
-      <div>
-        <span class="text-purple-600 font-bold">موارد إبداعية</span>
-        <h2 class="text-3xl font-extrabold text-indigo-950 mt-2">
-          مكتبة PSD وPNG المجانية
-        </h2>
-        <p class="text-gray-500 mt-2">اكتشف موارد تساعدك على تطوير تصاميمك.</p>
+    <!-- SEARCH -->
+    <div class="max-w-2xl mx-auto mb-8">
+      <div class="relative">
+        <i class="fa-solid fa-magnifying-glass absolute right-5 top-1/2 -translate-y-1/2 text-gray-400"></i>
+        <input
+          type="search"
+          id="librarySearch"
+          placeholder="ابحث عن تصميم..."
+          aria-label="ابحث في مكتبة التصاميم"
+          class="w-full border border-gray-200 rounded-full py-4 pr-12 pl-5 outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-100">
+      </div>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="flex flex-wrap justify-center gap-3 mb-10">
+      <button class="library-filter active-filter" data-filter="all">الكل</button>
+      <button class="library-filter" data-filter="thumbnails">صور مصغرة</button>
+      <button class="library-filter" data-filter="social">سوشيال ميديا</button>
+      <button class="library-filter" data-filter="posters">ملصقات</button>
+      <button class="library-filter" data-filter="backgrounds">خلفيات</button>
+      <button class="library-filter" data-filter="banners">بانرات</button>
+    </div>
+
+    <!-- DESIGN CARDS -->
+    <div id="libraryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div class="library-card card" data-category="thumbnails" data-name="تصميم صورة مصغرة لليوتيوب">
+        <div class="library-image">
+          <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=700&q=85"
+               alt="تصميم صورة مصغرة" loading="lazy">
+        </div>
+        <div class="p-5">
+          <span class="text-xs text-purple-600 font-bold">صور مصغرة</span>
+          <h3 class="font-extrabold text-indigo-950 text-lg mt-2">تصميم صورة مصغرة لليوتيوب</h3>
+          <div class="flex gap-2 mt-4">
+            <span class="format-badge psd-badge">PSD</span>
+            <span class="format-badge png-badge">PNG</span>
+          </div>
+          <div class="flex gap-2 mt-5">
+            <button disabled class="download-disabled"><i class="fa-solid fa-download ml-1"></i> PSD</button>
+            <button disabled class="download-disabled"><i class="fa-solid fa-download ml-1"></i> PNG</button>
+          </div>
+        </div>
       </div>
 
-      <a href="articles.html" class="border border-purple-200 text-purple-700 px-5 py-3 rounded-full font-bold hover:bg-purple-50 transition">
-        اكتشف المزيد
-        <i class="fa-solid fa-arrow-left mr-2"></i>
-      </a>
+      <div class="library-card card" data-category="social" data-name="تصميم منشور انستغرام">
+        <div class="library-image">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=85"
+               alt="تصميم منشور" loading="lazy">
+        </div>
+        <div class="p-5">
+          <span class="text-xs text-purple-600 font-bold">سوشيال ميديا</span>
+          <h3 class="font-extrabold text-indigo-950 text-lg mt-2">تصميم منشور إنستغرام</h3>
+          <div class="flex gap-2 mt-4">
+            <span class="format-badge psd-badge">PSD</span>
+            <span class="format-badge png-badge">PNG</span>
+          </div>
+          <div class="flex gap-2 mt-5">
+            <button disabled class="download-disabled"><i class="fa-solid fa-download ml-1"></i> PSD</button>
+            <button disabled class="download-disabled"><i class="fa-solid fa-download ml-1"></i> PNG</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="library-card card" data-category="posters" data-name="ملصق إبداعي">
+        <div class="library-image">
+          <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=700&q=85"
+               alt="ملصق إبداعي" loading="lazy">
+        </div>
+        <div class="p-5">
+          <span class="text-xs text-purple-600 font-bold">ملصقات</span>
+          <h3 class="font-extrabold text-indigo-950 text-lg mt-2">ملصق إبداعي</h3>
+          <div class="flex gap-2 mt-4">
+            <span class="format-badge psd-badge">PSD</span>
+            <span class="format-badge png-badge">PNG</span>
+          </div>
+          <div class="flex gap-2 mt-5">
+            <button disabled class="download-disabled"><i class="fa-solid fa-download ml-1"></i> PSD</button>
+            <button disabled class="download-disabled"><i class="fa-solid fa-download ml-1"></i> PNG</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="library-card card" data-category="backgrounds" data-name="خلفية فنية ملونة">
+        <div class="library-image">
+          <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=700&q=85"
+               alt="خلفية فنية" loading="lazy">
+        </div>
+        <div class="p-5">
+          <span class="text-xs text-purple-600 font-bold">خلفيات</span>
+          <h3 class="font-extrabold text-indigo-950 text-lg mt-2">خلفية فنية ملونة</h3>
+          <div class="flex gap-2 mt-4">
+            <span class="format-badge psd-badge">PSD</span>
+            <span class="format-badge png-badge">PNG</span>
+          </div>
+          <div class="flex gap-2 mt-5">
+            <button disabled class="download-disabled"><i class="fa-solid fa-download ml-1"></i> PSD</button>
+            <button disabled class="download-disabled"><i class="fa-solid fa-download ml-1"></i> PNG</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="library-card card" data-category="banners" data-name="بانر تصميم احترافي">
+        <div class="library-image">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=85"
+               alt="بانر احترافي" loading="lazy">
+        </div>
+        <div class="p-5">
+          <span class="text-xs text-purple-600 font-bold">بانرات</span>
+          <h3 class="font-extrabold text-indigo-950 text-lg mt-2">بانر تصميم احترافي</h3>
+          <div class="flex gap-2 mt-4">
+            <span class="format-badge psd-badge">PSD</span>
+            <span class="format-badge png-badge">PNG</span>
+          </div>
+          <div class="flex gap-2 mt-5">
+            <button disabled class="download-disabled"><i class="fa-solid fa-download ml-1"></i> PSD</button>
+            <button disabled class="download-disabled"><i class="fa-solid fa-download ml-1"></i> PNG</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="library-card card" data-category="thumbnails" data-name="صورة مصغرة إبداعية">
+        <div class="library-image">
+          <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=700&q=85"
+               alt="صورة مصغرة إبداعية" loading="lazy">
+        </div>
+        <div class="p-5">
+          <span class="text-xs text-purple-600 font-bold">صور مصغرة</span>
+          <h3 class="font-extrabold text-indigo-950 text-lg mt-2">صورة مصغرة إبداعية</h3>
+          <div class="flex gap-2 mt-4">
+            <span class="format-badge psd-badge">PSD</span>
+            <span class="format-badge png-badge">PNG</span>
+          </div>
+          <div class="flex gap-2 mt-5">
+            <button disabled class="download-disabled"><i class="fa-solid fa-download ml-1"></i> PSD</button>
+            <button disabled class="download-disabled"><i class="fa-solid fa-download ml-1"></i> PNG</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="library-card card" data-category="social" data-name="تصميم سوشيال ميديا">
+        <div class="library-image">
+          <img src="https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=700&q=85"
+               alt="تصميم سوشيال ميديا" loading="lazy">
+        </div>
+        <div class="p-5">
+          <span class="text-xs text-purple-600 font-bold">سوشيال ميديا</span>
+          <h3 class="font-extrabold text-indigo-950 text-lg mt-2">تصميم سوشيال ميديا</h3>
+          <div class="flex gap-2 mt-4">
+            <span class="format-badge psd-badge">PSD</span>
+            <span class="format-badge png-badge">PNG</span>
+          </div>
+          <div class="flex gap-2 mt-5">
+            <button disabled class="download-disabled"><i class="fa-solid fa-download ml-1"></i> PSD</button>
+            <button disabled class="download-disabled"><i class="fa-solid fa-download ml-1"></i> PNG</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="library-card card" data-category="backgrounds" data-name="خلفية طبيعية">
+        <div class="library-image">
+          <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=700&q=85"
+               alt="خلفية طبيعية" loading="lazy">
+        </div>
+        <div class="p-5">
+          <span class="text-xs text-purple-600 font-bold">خلفيات</span>
+          <h3 class="font-extrabold text-indigo-950 text-lg mt-2">خلفية طبيعية</h3>
+          <div class="flex gap-2 mt-4">
+            <span class="format-badge psd-badge">PSD</span>
+            <span class="format-badge png-badge">PNG</span>
+          </div>
+          <div class="flex gap-2 mt-5">
+            <button disabled class="download-disabled"><i class="fa-solid fa-download ml-1"></i> PSD</button>
+            <button disabled class="download-disabled"><i class="fa-solid fa-download ml-1"></i> PNG</button>
+          </div>
+        </div>
+      </div>
 
     </div>
 
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-      <div class="library-card card bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
-        <div class="overflow-hidden h-48">
-          <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=600&q=80"
-               alt="تصميم إعلاني" class="w-full h-full object-cover" loading="lazy">
-        </div>
-        <div class="p-4">
-          <h3 class="font-bold text-indigo-950">تصميم إعلاني</h3>
-          <div class="flex gap-2 mt-3">
-            <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded">PSD</span>
-            <span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded">PNG</span>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="library-card card bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
-        <div class="overflow-hidden h-48">
-          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80"
-               alt="تصميم مساحة عمل" class="w-full h-full object-cover" loading="lazy">
-        </div>
-        <div class="p-4">
-          <h3 class="font-bold text-indigo-950">خلفيات إبداعية</h3>
-          <div class="flex gap-2 mt-3">
-            <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded">PSD</span>
-            <span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded">PNG</span>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="library-card card bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
-        <div class="overflow-hidden h-48">
-          <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=600&q=80"
-               alt="منظر طبيعي إبداعي" class="w-full h-full object-cover" loading="lazy">
-        </div>
-        <div class="p-4">
-          <h3 class="font-bold text-indigo-950">مناظر طبيعية</h3>
-          <div class="flex gap-2 mt-3">
-            <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded">PSD</span>
-            <span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded">PNG</span>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="library-card card bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
-        <div class="overflow-hidden h-48">
-          <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=600&q=80"
-               alt="خلفية فنية ملونة" class="w-full h-full object-cover" loading="lazy">
-        </div>
-        <div class="p-4">
-          <h3 class="font-bold text-indigo-950">خلفيات فنية</h3>
-          <div class="flex gap-2 mt-3">
-            <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded">PSD</span>
-            <span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded">PNG</span>
-          </div>
-        </div>
-      </div>
-
+    <div id="noLibraryResults" class="hidden text-center py-12">
+      <i class="fa-solid fa-magnifying-glass text-4xl text-gray-300"></i>
+      <p class="text-gray-500 mt-4">لم يتم العثور على تصاميم مطابقة لبحثك.</p>
     </div>
 
-    <p class="text-xs text-gray-400 text-center mt-6">
-      الصور المعروضة أمثلة توضيحية، وليست ملفات PSD أو PNG قابلة للتنزيل.
+    <p class="text-sm text-gray-400 text-center mt-10">
+      هذه معاينات توضيحية. سيتم تفعيل التحميل عند إضافة ملفات PSD وPNG الحقيقية.
     </p>
-
   </div>
 </section>
-
 
 <!-- FEATURES -->
 <section class="py-14 px-5 bg-gray-50 border-y border-gray-100">
-
   <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-
     <div>
       <i class="fa-solid fa-wand-magic-sparkles text-purple-600 text-3xl mb-3"></i>
       <h3 class="font-bold text-indigo-950">أدوات مبتكرة</h3>
       <p class="text-sm text-gray-500 mt-2">حلول إبداعية</p>
     </div>
-
     <div>
       <i class="fa-solid fa-layer-group text-blue-600 text-3xl mb-3"></i>
       <h3 class="font-bold text-indigo-950">طبقات مستقلة</h3>
       <p class="text-sm text-gray-500 mt-2">تحكم أكبر في التصميم</p>
     </div>
-
     <div>
       <i class="fa-solid fa-bolt text-orange-500 text-3xl mb-3"></i>
       <h3 class="font-bold text-indigo-950">سهولة الاستخدام</h3>
       <p class="text-sm text-gray-500 mt-2">واجهة بسيطة وسريعة</p>
     </div>
-
     <div>
       <i class="fa-solid fa-globe text-green-600 text-3xl mb-3"></i>
       <h3 class="font-bold text-indigo-950">للمبدعين حول العالم</h3>
       <p class="text-sm text-gray-500 mt-2">رؤية عالمية</p>
     </div>
-
   </div>
 </section>
 
-
 <!-- CTA -->
 <section class="py-20 px-5">
-
   <div class="max-w-7xl mx-auto rounded-3xl p-10 md:p-14 text-white bg-gradient-to-r from-purple-700 to-blue-600 flex flex-col md:flex-row justify-between items-center gap-8 shadow-xl">
-
     <div>
-      <h2 class="text-3xl font-extrabold mb-4">
-        أطلق العنان لإبداعك مع LayerAI
-      </h2>
-      <p class="text-purple-100 text-lg">
-        اكتشف، أنشئ، وطوّر تصاميمك بطريقة جديدة.
-      </p>
+      <h2 class="text-3xl font-extrabold mb-4">أطلق العنان لإبداعك مع LayerAI</h2>
+      <p class="text-purple-100 text-lg">اكتشف، أنشئ، وطوّر تصاميمك بطريقة جديدة.</p>
     </div>
-
     <a href="#tools" class="bg-white text-purple-700 px-8 py-4 rounded-full font-extrabold hover:bg-gray-100 transition whitespace-nowrap">
       ابدأ الآن
       <i class="fa-solid fa-arrow-left mr-2"></i>
     </a>
-
   </div>
 </section>
 
-
 <!-- FOOTER -->
 <footer class="bg-indigo-950 text-white pt-14 pb-8 px-5">
-
   <div class="max-w-7xl mx-auto">
-
     <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-10 pb-10">
 
       <div>
@@ -440,7 +582,7 @@
         <h3 class="font-bold text-lg mb-4">أدواتنا</h3>
         <ul class="space-y-3 text-gray-300 text-sm">
           <li><a href="https://psdai.cyou/" class="hover:text-purple-300">تحويل الصور إلى PSD</a></li>
-          <li><span class="text-gray-400">مولد التصاميم الذكي - قريباً</span></li>
+          <li><a href="https://layerai.yassdada91.workers.dev/" class="hover:text-purple-300">مولد التصاميم الذكي</a></li>
         </ul>
       </div>
 
@@ -449,9 +591,58 @@
     <div class="border-t border-indigo-800 pt-6 text-center text-gray-400 text-sm">
       © 2026 LayerAI. جميع الحقوق محفوظة.
     </div>
-
   </div>
 </footer>
+
+<!-- LIBRARY SEARCH AND FILTER -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const searchInput = document.getElementById("librarySearch");
+  const filterButtons = document.querySelectorAll(".library-filter");
+  const cards = document.querySelectorAll(".library-card");
+  const noResults = document.getElementById("noLibraryResults");
+
+  let currentFilter = "all";
+
+  function filterLibrary() {
+    const searchText = searchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
+
+    cards.forEach(function (card) {
+      const category = card.dataset.category;
+      const name = (card.dataset.name || "").toLowerCase();
+
+      const matchesCategory =
+        currentFilter === "all" || category === currentFilter;
+
+      const matchesSearch = name.includes(searchText);
+
+      if (matchesCategory && matchesSearch) {
+        card.classList.remove("hidden");
+        visibleCount++;
+      } else {
+        card.classList.add("hidden");
+      }
+    });
+
+    noResults.classList.toggle("hidden", visibleCount !== 0);
+  }
+
+  filterButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      filterButtons.forEach(function (item) {
+        item.classList.remove("active-filter");
+      });
+
+      button.classList.add("active-filter");
+      currentFilter = button.dataset.filter;
+      filterLibrary();
+    });
+  });
+
+  searchInput.addEventListener("input", filterLibrary);
+});
+</script>
 
 </body>
 </html>
