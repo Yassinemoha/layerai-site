@@ -1,29 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://yassinemoha.github.io/layerai-site/</loc>
+    <loc>https://psdai.cyou/</loc>
   </url>
+
   <url>
-    <loc>https://yassinemoha.github.io/layerai-site/about.html</loc>
+    <loc>https://psdai.cyou/about.html</loc>
   </url>
+
   <url>
-    <loc>https://yassinemoha.github.io/layerai-site/contact.html</loc>
+    <loc>https://psdai.cyou/contact.html</loc>
   </url>
+
   <url>
-    <loc>https://yassinemoha.github.io/layerai-site/privacy.html</loc>
+    <loc>https://psdai.cyou/privacy.html</loc>
   </url>
+
   <url>
-    <loc>https://yassinemoha.github.io/layerai-site/terms.html</loc>
+    <loc>https://psdai.cyou/terms.html</loc>
   </url>
+
   <url>
-    <loc>https://yassinemoha.github.io/layerai-site/articles.html</loc>
+    <loc>https://psdai.cyou/articles.html</loc>
   </url>
+
   <url>
-    <loc>https://yassinemoha.github.io/layerai-site/jpg-vs-png-vs-psd.html</loc>
+    <loc>https://psdai.cyou/jpg-vs-png-vs-psd.html</loc>
   </url>
+
   <url>
-    <loc>https://yassinemoha.github.io/layerai-site/how-ai-image-layer-separation-works.html</loc>
+    <loc>https://psdai.cyou/how-ai-image-layer-separation-works.html</loc>
   </url>
+
   <url>
-    <loc>https://yassinemoha.github.io/layerai-site/separate-objects-in-image-ai.html</loc>
+    <loc>https://psdai.cyou/separate-objects-in-image-ai.html</loc>
   </url>
+
 </urlset>
