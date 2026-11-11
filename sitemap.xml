@@ -1,52 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-    <url>
-        <loc>https://psdai.cyou/</loc>
-    </url>
+  <url>
+    <loc>https://psdai.cyou/</loc>
+  </url>
 
-    <url>
-        <loc>https://psdai.cyou/articles.html</loc>
-    </url>
+  <url>
+    <loc>https://psdai.cyou/articles.html</loc>
+  </url>
 
-    <url>
-        <loc>https://psdai.cyou/how-ai-image-layer-separation-works.html</loc>
-    </url>
+  <url>
+    <loc>https://psdai.cyou/how-ai-image-layer-separation-works.html</loc>
+  </url>
 
-    <url>
-        <loc>https://psdai.cyou/separate-objects-in-image-ai.html</loc>
-    </url>
+  <url>
+    <loc>https://psdai.cyou/separate-objects-in-image-ai.html</loc>
+  </url>
 
-    <url>
-        <loc>https://psdai.cyou/jpg-vs-png-vs-psd.html</loc>
-    </url>
+  <url>
+    <loc>https://psdai.cyou/jpg-vs-png-vs-psd.html</loc>
+  </url>
 
-    <url>
-        <loc>https://psdai.cyou/light-flares-laser-beams.html</loc>
-    </url>
+  <url>
+    <loc>https://psdai.cyou/light-flares-laser-beams.html</loc>
+  </url>
 
-    <url>
-        <loc>https://psdai.cyou/school-education-logos.html</loc>
-    </url>
+  <url>
+    <loc>https://psdai.cyou/school-education-logos.html</loc>
+  </url>
 
-    <url>
-        <loc>https://psdai.cyou/light-flare-overlays-photoshop.html</loc>
-    </url>
+  <url>
+    <loc>https://psdai.cyou/light-flare-overlays-photoshop.html</loc>
+  </url>
 
-    <url>
-        <loc>https://psdai.cyou/about.html</loc>
-    </url>
+  <url>
+    <loc>https://psdai.cyou/modern-fashion-store-social-media-template.html</loc>
+  </url>
 
-    <url>
-        <loc>https://psdai.cyou/contact.html</loc>
-    </url>
+  <url>
+    <loc>https://psdai.cyou/about.html</loc>
+  </url>
 
-    <url>
-        <loc>https://psdai.cyou/privacy.html</loc>
-    </url>
+  <url>
+    <loc>https://psdai.cyou/contact.html</loc>
+  </url>
 
-    <url>
-        <loc>https://psdai.cyou/terms.html</loc>
-    </url>
+  <url>
+    <loc>https://psdai.cyou/privacy.html</loc>
+  </url>
+
+  <url>
+    <loc>https://psdai.cyou/terms.html</loc>
+  </url>
 
 </urlset>
